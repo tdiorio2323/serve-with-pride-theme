@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/truth-matters-logo.png";
 
 const Hero = () => {
   return (
@@ -30,7 +30,7 @@ const Hero = () => {
           <img 
             src={logo} 
             alt="Truth Matters" 
-            className="h-24 w-24 mx-auto mb-6 drop-shadow-2xl"
+            className="h-32 w-64 mx-auto mb-6 drop-shadow-2xl"
           />
         </div>
         
