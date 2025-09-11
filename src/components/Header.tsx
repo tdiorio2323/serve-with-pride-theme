@@ -35,11 +35,11 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center">
               <img 
                 src={logo} 
                 alt="Truth Matters Logo" 
-                className="h-16 w-32 object-contain"
+                className="h-32 w-64 object-contain"
               />
             </div>
 
