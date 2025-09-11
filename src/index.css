@@ -50,10 +50,17 @@ All colors MUST be HSL.
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--brand-navy)), hsl(var(--brand-red)));
     --gradient-red: linear-gradient(90deg, hsl(var(--brand-red)), hsl(352 85% 65%));
+    --gradient-premium: linear-gradient(145deg, rgba(215, 38, 61, 0.1), rgba(29, 42, 54, 0.1));
     
-    /* Shadows */
-    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-button: 0 2px 4px rgba(215, 38, 61, 0.2);
+    /* Enhanced Shadows */
+    --shadow-card: 0 20px 50px -12px rgba(0, 0, 0, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.1);
+    --shadow-button: 0 8px 25px 0 rgba(215, 38, 61, 0.4);
+    --shadow-button-hover: 0 12px 35px 0 rgba(215, 38, 61, 0.6);
+    --shadow-elegant: 0 25px 65px -12px rgba(0, 0, 0, 0.35);
+    
+    /* Glass Effects */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
     
     /* Typography */
     --font-display: 'Bebas Neue', cursive;

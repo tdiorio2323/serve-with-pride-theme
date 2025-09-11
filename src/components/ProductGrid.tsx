@@ -56,7 +56,7 @@ const ProductGrid = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {products.map((product) => (
             <div key={product.id} className="group">
-              <div className="bg-card rounded-lg shadow-card border border-border overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-card rounded-lg border border-border overflow-hidden transition-all duration-500 transform hover:-translate-y-3 hover:scale-105" style={{ boxShadow: 'var(--shadow-card)' }}>
                 <div className="relative">
                   <img 
                     src={product.image} 

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import serviceBg from "@/assets/service-bg.jpg";
 import { Badge, Shield, Flame, Truck } from "lucide-react";
 
 const ServiceDiscount = () => {
@@ -11,18 +12,12 @@ const ServiceDiscount = () => {
 
   return (
     <section className="py-20 bg-brand-navy text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 2px,
-            rgba(255,255,255,0.1) 2px,
-            rgba(255,255,255,0.1) 4px
-          )`
-        }}></div>
-      </div>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ backgroundImage: `url(${serviceBg})` }}
+      ></div>
+      <div className="absolute inset-0 bg-brand-navy/80"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
