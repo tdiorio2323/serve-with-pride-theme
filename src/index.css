@@ -8,33 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Truth Matters Brand Colors */
+    --background: 216 20% 97.5%;
+    --foreground: 0 0% 6.7%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 6.7%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 6.7%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand Primary - Truth Red */
+    --primary: 352 76% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Brand Secondary - Service Blue */
+    --secondary: 209 42% 16%;
+    --secondary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 216 12% 84%;
+    --muted-foreground: 0 0% 45%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 352 76% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --border: 216 12% 84%;
+    --input: 216 12% 84%;
+    --ring: 352 76% 50%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    
+    /* Custom Brand Variables */
+    --brand-red: 352 76% 50%;
+    --brand-dark: 0 0% 6.7%;
+    --brand-navy: 209 42% 16%;
+    --brand-gray: 216 20% 97.5%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-navy)), hsl(var(--brand-red)));
+    --gradient-red: linear-gradient(90deg, hsl(var(--brand-red)), hsl(352 85% 65%));
+    
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-button: 0 2px 4px rgba(215, 38, 61, 0.2);
+    
+    /* Typography */
+    --font-display: 'Bebas Neue', cursive;
+    --font-body: 'Inter', sans-serif;
 
     --radius: 0.5rem;
 
