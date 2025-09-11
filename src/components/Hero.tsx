@@ -1,29 +1,17 @@
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/truth-matters-logo.png";
 
 const Hero = () => {
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(29, 42, 54, 0.8), rgba(215, 38, 61, 0.3)), url(${heroBg})`,
+        backgroundImage: `url(${heroBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
       }}
     >
-      {/* Watermark Logo */}
-      <div 
-        className="absolute inset-0 flex items-center justify-center opacity-10"
-        style={{
-          backgroundImage: `url(${logo})`,
-          backgroundSize: '40%',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center'
-        }}
-      />
-      
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         
