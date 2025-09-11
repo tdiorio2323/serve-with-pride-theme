@@ -26,13 +26,7 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-        <div className="mb-8">
-          <img 
-            src={logo} 
-            alt="Truth Matters" 
-            className="h-32 w-64 mx-auto mb-6 drop-shadow-2xl"
-          />
-        </div>
+        
         
         <h1 className="font-display text-6xl md:text-8xl font-bold text-white mb-6 tracking-wider drop-shadow-2xl">
           GEAR BUILT FOR
