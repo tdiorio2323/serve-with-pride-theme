@@ -32,7 +32,7 @@ const Header = () => {
             </nav>
 
             {/* Logo */}
-            <div className="flex items-center">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2">
               <img 
                 src={logo} 
                 alt="Truth Matters Logo" 
