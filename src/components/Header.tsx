@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,11 +31,11 @@ const Header = () => {
             </nav>
 
             {/* Logo */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2">
-              <img 
-                src={logo} 
-                alt="Truth Matters Logo" 
-                className="h-24 w-auto object-contain"
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <img
+                src="/lovable-uploads/90530307-3214-4d21-8704-4884a059a14b.png"
+                alt="Truth Matters Logo"
+                className="h-20 w-auto object-contain"
               />
             </div>
 
