@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "SHOP", href: "#shop" },
-    { label: "ABOUT", href: "#about" },
-    { label: "CAUSES", href: "#causes" },
-    { label: "CONTACT", href: "#contact" },
+    { label: "SHOP", href: "/#shop" },
+    { label: "ABOUT", href: "/about" },
+    { label: "CAUSES", href: "/causes" },
+    { label: "CONTACT", href: "/contact" },
   ];
 
   return (
@@ -20,23 +21,25 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 items-center space-x-8">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
+                  to={item.href}
                   className="font-display text-lg font-bold text-white hover:text-primary transition-colors duration-200 tracking-wide"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </nav>
 
             {/* Logo */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <img
-                src="/lovable-uploads/90530307-3214-4d21-8704-4884a059a14b.png"
-                alt="Truth Matters Logo"
-                className="h-20 w-auto object-contain"
-              />
+              <Link to="/">
+                <img
+                  src="/lovable-uploads/90530307-3214-4d21-8704-4884a059a14b.png"
+                  alt="Truth Matters Logo"
+                  className="h-20 w-auto object-contain"
+                />
+              </Link>
             </div>
 
             {/* Icons */}
@@ -67,14 +70,14 @@ const Header = () => {
             <div className="md:hidden absolute top-full left-0 right-0 bg-background border-t border-border">
               <nav className="flex flex-col py-4">
                 {navItems.map((item) => (
-                  <a
+                  <Link
                     key={item.label}
-                    href={item.href}
+                    to={item.href}
                     className="font-display text-lg font-bold text-white hover:text-primary transition-colors duration-200 tracking-wide px-4 py-3"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>

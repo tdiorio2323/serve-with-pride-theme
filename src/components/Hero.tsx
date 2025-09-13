@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         
         
-        <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6 tracking-wider drop-shadow-2xl">
+        <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6 tracking-wider drop-shadow-2xl mt-16">
           Built on Honor,
           <br />
           Worn with Pride
@@ -35,7 +35,7 @@ const Hero = () => {
         </Button>
         
         {/* Trust Indicators */}
-        <div className="mt-16 flex flex-wrap justify-center items-center gap-8 text-white/70 font-body text-sm">
+        <div className="mt-16 flex flex-wrap justify-center items-center gap-8 text-white font-body text-sm font-bold">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-primary rounded-full"></div>
             VETERAN OWNED

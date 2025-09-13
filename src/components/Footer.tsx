@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialLinks = [
@@ -11,9 +12,28 @@ const Footer = () => {
   ];
 
   const footerLinks = {
-    "SHOP": ["All Products", "T-Shirts", "Hoodies", "Hats", "Patches", "Accessories"],
-    "SUPPORT": ["Contact Us", "Size Guide", "Shipping Info", "Returns", "FAQ"],
-    "COMPANY": ["About Us", "Our Mission", "Careers", "Press", "Blog"]
+    "SHOP": [
+      { name: "All Products", path: "/all-products" },
+      { name: "T-Shirts", path: "/t-shirts" },
+      { name: "Hoodies", path: "/hoodies" },
+      { name: "Hats", path: "/hats" },
+      { name: "Patches", path: "/patches" },
+      { name: "Accessories", path: "/accessories" }
+    ],
+    "SUPPORT": [
+      { name: "Contact Us", path: "/contact" },
+      { name: "Size Guide", path: "/size-guide" },
+      { name: "Shipping Info", path: "/shipping-info" },
+      { name: "Returns", path: "/returns" },
+      { name: "FAQ", path: "/faq" }
+    ],
+    "COMPANY": [
+      { name: "About Us", path: "/about" },
+      { name: "Our Mission", path: "/our-mission" },
+      { name: "Careers", path: "/careers" },
+      { name: "Press", path: "/press" },
+      { name: "Blog", path: "/blog" }
+    ]
   };
 
   return (
@@ -70,12 +90,12 @@ const Footer = () => {
               <ul className="space-y-2">
                 {links.map((link, index) => (
                   <li key={index}>
-                    <a 
-                      href="#"
+                    <Link 
+                      to={link.path}
                       className="font-body text-white/80 hover:text-primary transition-colors duration-200"
                     >
-                      {link}
-                    </a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -115,9 +135,9 @@ const Footer = () => {
               © 2024 Truth Matters. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-primary transition-colors">Accessibility</a>
+              <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
+              <Link to="/accessibility" className="hover:text-primary transition-colors">Accessibility</Link>
             </div>
           </div>
         </div>
@@ -125,5 +145,7 @@ const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;
 
 export default Footer;
