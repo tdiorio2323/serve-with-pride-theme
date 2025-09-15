@@ -26,6 +26,7 @@ import Hats from "./pages/Hats";
 import Patches from "./pages/Patches";
 import Accessories from "./pages/Accessories";
 import NewPage from "./pages/NewPage";
+import TestPage from "./pages/TestPage";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
           <Route path="/patches" element={<Patches />} />
           <Route path="/accessories" element={<Accessories />} />
           <Route path="/new-page" element={<NewPage />} />
+          <Route path="/test-page" element={<TestPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
