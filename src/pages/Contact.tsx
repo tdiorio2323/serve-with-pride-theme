@@ -2,10 +2,13 @@ import { FC } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Contact: FC = () => {
   return (
-    <div className="bg-background text-foreground">
+    <div className="hero-flag-background min-h-screen text-white">
+      <Header />
       <header className="py-24 text-center">
         <h1 className="font-display text-5xl font-bold tracking-tight">
           Contact Us
@@ -49,6 +52,7 @@ const Contact: FC = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

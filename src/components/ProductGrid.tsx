@@ -1,43 +1,71 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import flagTee from "@/assets/flag-tee.jpg";
-import responderHoodie from "@/assets/responder-hoodie.jpg";
-import patriotHat from "@/assets/patriot-hat.jpg";
-import thinBlueLinePatch from "@/assets/thin-blue-line-patch.jpg";
 
 const ProductGrid = () => {
   const products = [
     {
       id: 1,
-      name: "Freedom Flag Tee",
+      name: "Truth Matters Original",
       price: "$29.99",
-      image: flagTee,
+      image: "/truth-logo-1.png",
       badge: "BESTSELLER",
-      description: "Premium cotton tee with vintage flag design"
+      description: "Classic Truth Matters design"
     },
     {
       id: 2,
-      name: "First Responder Hoodie",
-      price: "$54.99",
-      image: responderHoodie,
+      name: "Patriot Warrior",
+      price: "$34.99",
+      image: "/truth-logo-2.png",
       badge: "NEW",
-      description: "Heavy-duty hoodie honoring our heroes"
+      description: "Bold warrior-inspired design"
     },
     {
       id: 3,
-      name: "Patriot Trucker Hat",
-      price: "$24.99",
-      image: patriotHat,
+      name: "Service Pride",
+      price: "$32.99",
+      image: "/truth-logo-3.png",
       badge: null,
-      description: "Classic mesh-back cap with flag patch"
+      description: "Honoring those who serve"
     },
     {
       id: 4,
-      name: "Thin Blue Line Patch",
-      price: "$12.99",
-      image: thinBlueLinePatch,
+      name: "Freedom Fighter",
+      price: "$31.99",
+      image: "/truth-logo-4.png",
       badge: "SUPPORT",
-      description: "Iron-on patch supporting law enforcement"
+      description: "Stand for freedom and justice"
+    },
+    {
+      id: 5,
+      name: "Honor Guard",
+      price: "$33.99",
+      image: "/truth-logo-5.png",
+      badge: null,
+      description: "Tribute to honor and duty"
+    },
+    {
+      id: 6,
+      name: "Liberty Shield",
+      price: "$35.99",
+      image: "/truth-logo-6.png",
+      badge: "LIMITED",
+      description: "Defending liberty since day one"
+    },
+    {
+      id: 7,
+      name: "Courage Elite",
+      price: "$36.99",
+      image: "/truth-logo-7.png",
+      badge: null,
+      description: "For the courageous few"
+    },
+    {
+      id: 8,
+      name: "Victory Line",
+      price: "$30.99",
+      image: "/truth-logo-8.png",
+      badge: "POPULAR",
+      description: "Victory through perseverance"
     }
   ];
 

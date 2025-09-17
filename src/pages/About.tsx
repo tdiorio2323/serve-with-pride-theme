@@ -1,18 +1,17 @@
 import { FC } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const About: FC = () => {
   return (
-    <div className="bg-background text-foreground">
-      <header 
-        className="relative bg-cover bg-center bg-no-repeat py-40 text-center text-white"
-        style={{ backgroundImage: "url('/lovable-uploads/d8335492-a312-421d-9c3a-d102272a728a.png')" }}
-      >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative">
-          <h1 className="font-display text-5xl font-bold tracking-tight drop-shadow-md">
+    <div className="hero-flag-background min-h-screen">
+      <Header />
+      <header className="py-40 text-center bg-white/95 backdrop-blur-sm">
+        <div className="container mx-auto px-4">
+          <h1 className="font-display text-5xl font-bold tracking-tight text-black">
             About Us
           </h1>
-          <p className="mt-4 text-xl text-white/90 drop-shadow-md">
+          <p className="mt-4 text-xl text-black/80">
             Founded by veterans and first responders, for veterans and first
             responders.
           </p>
@@ -72,6 +71,7 @@ const About: FC = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
