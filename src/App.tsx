@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartProvider } from "@/contexts/CartContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
@@ -25,17 +26,21 @@ import Hoodies from "./pages/Hoodies";
 import Hats from "./pages/Hats";
 import Patches from "./pages/Patches";
 import Accessories from "./pages/Accessories";
+import Mens from "./pages/Mens";
+import Womens from "./pages/Womens";
 import NewPage from "./pages/NewPage";
 import TestPage from "./pages/TestPage";
+import Mockups from "./pages/Mockups";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+      <CartProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
@@ -58,12 +63,16 @@ const App = () => (
           <Route path="/hats" element={<Hats />} />
           <Route path="/patches" element={<Patches />} />
           <Route path="/accessories" element={<Accessories />} />
+          <Route path="/mens" element={<Mens />} />
+          <Route path="/womens" element={<Womens />} />
           <Route path="/new-page" element={<NewPage />} />
           <Route path="/test-page" element={<TestPage />} />
+          <Route path="/mockups" element={<Mockups />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+        </BrowserRouter>
+      </CartProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );

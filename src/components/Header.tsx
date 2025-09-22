@@ -1,13 +1,34 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Search, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ShoppingCartTrigger, ShoppingCart } from "@/components/ShoppingCart";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isShopDropdownOpen, setIsShopDropdownOpen] = useState(false);
 
   const navItems = [
-    { label: "SHOP", href: "/#shop" },
+    {
+      label: "SHOP",
+      href: "/all-products",
+      submenu: [
+        { label: "All Products", href: "/all-products" },
+        { label: "Men's", href: "/mens" },
+        { label: "Women's", href: "/womens" },
+        { label: "T-Shirts", href: "/t-shirts" },
+        { label: "Hoodies", href: "/hoodies" },
+        { label: "Hats", href: "/hats" },
+        { label: "Patches", href: "/patches" },
+        { label: "Accessories", href: "/accessories" }
+      ]
+    },
     { label: "ABOUT", href: "/about" },
     { label: "CAUSES", href: "/causes" },
     { label: "CONTACT", href: "/contact" },
@@ -20,15 +41,40 @@ const Header = () => {
           <div className="relative flex items-center justify-center h-32">
             {/* Desktop Navigation */}
             <nav className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 items-center space-x-8">
-              {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.href}
-                  className="font-display text-lg font-bold text-white hover:text-primary transition-colors duration-200 tracking-wide"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                if (item.submenu) {
+                  return (
+                    <DropdownMenu key={item.label}>
+                      <DropdownMenuTrigger className="font-display text-lg font-bold text-white hover:text-primary transition-colors duration-200 tracking-wide flex items-center gap-1">
+                        {item.label}
+                        <ChevronDown className="w-4 h-4" />
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="bg-black border-gray-700">
+                        {item.submenu.map((subItem) => (
+                          <DropdownMenuItem key={subItem.label} asChild>
+                            <Link
+                              to={subItem.href}
+                              className="text-white hover:text-primary hover:bg-gray-800 w-full px-4 py-2 block"
+                            >
+                              {subItem.label}
+                            </Link>
+                          </DropdownMenuItem>
+                        ))}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  );
+                } else {
+                  return (
+                    <Link
+                      key={item.label}
+                      to={item.href}
+                      className="font-display text-lg font-bold text-white hover:text-primary transition-colors duration-200 tracking-wide"
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                }
+              })}
             </nav>
 
             {/* Logo */}
@@ -45,15 +91,11 @@ const Header = () => {
             {/* Icons */}
             <div className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 items-center space-x-4">
                 <button className="text-white hover:text-primary transition-colors">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
+                  <Search className="w-6 h-6" />
                 </button>
-                <button className="text-white hover:text-primary transition-colors">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5-5M7 13l-2.5 5M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z" />
-                  </svg>
-                </button>
+                <div className="text-white">
+                  <ShoppingCartTrigger />
+                </div>
             </div>
 
             {/* Mobile Menu Button */}
@@ -67,23 +109,57 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMobileMenuOpen && (
-            <div className="md:hidden absolute top-full left-0 right-0 bg-background border-t border-border">
+            <div className="md:hidden absolute top-full left-0 right-0 bg-black border-t border-gray-700 z-50">
               <nav className="flex flex-col py-4">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.label}
-                    to={item.href}
-                    className="font-display text-lg font-bold text-white hover:text-primary transition-colors duration-200 tracking-wide px-4 py-3"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                {navItems.map((item) => {
+                  if (item.submenu) {
+                    return (
+                      <div key={item.label}>
+                        <button
+                          className="font-display text-lg font-bold text-white hover:text-primary transition-colors duration-200 tracking-wide px-4 py-3 flex items-center justify-between w-full"
+                          onClick={() => setIsShopDropdownOpen(!isShopDropdownOpen)}
+                        >
+                          {item.label}
+                          <ChevronDown className={`w-4 h-4 transition-transform ${isShopDropdownOpen ? 'rotate-180' : ''}`} />
+                        </button>
+                        {isShopDropdownOpen && (
+                          <div className="bg-gray-900 border-t border-gray-700">
+                            {item.submenu.map((subItem) => (
+                              <Link
+                                key={subItem.label}
+                                to={subItem.href}
+                                className="block px-8 py-2 text-gray-300 hover:text-primary hover:bg-gray-800 transition-colors"
+                                onClick={() => {
+                                  setIsMobileMenuOpen(false);
+                                  setIsShopDropdownOpen(false);
+                                }}
+                              >
+                                {subItem.label}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  } else {
+                    return (
+                      <Link
+                        key={item.label}
+                        to={item.href}
+                        className="font-display text-lg font-bold text-white hover:text-primary transition-colors duration-200 tracking-wide px-4 py-3"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    );
+                  }
+                })}
               </nav>
             </div>
           )}
         </div>
       </header>
+      <ShoppingCart />
       
       {/* Promotional Banner */}
       <div className="bg-primary text-white text-center py-2 px-4 font-body text-sm font-semibold tracking-wide">

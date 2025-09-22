@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import DonationTracker from "@/components/DonationTracker";
-import ProductGrid from "@/components/ProductGrid";
+// import ProductGrid from "@/components/ProductGrid";
 import ServiceDiscount from "@/components/ServiceDiscount";
 import Footer from "@/components/Footer";
 
@@ -12,7 +12,7 @@ const Index = () => {
       <main>
         <Hero />
         <DonationTracker />
-        <ProductGrid />
+        {/* <ProductGrid /> */}
         <ServiceDiscount />
       </main>
       <Footer />
