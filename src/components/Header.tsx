@@ -129,7 +129,7 @@ const Header = () => {
           {isMobileMenuOpen && (
             <div className="md:hidden absolute top-full left-0 right-0 bg-black border-t border-gray-700 z-50">
               <nav className="flex flex-col py-4">
-                {navItems.map((item) => {
+                {[...leftNavItems, ...rightNavItems].map((item) => {
                   if (item.submenu) {
                     return (
                       <div key={item.label}>
@@ -172,6 +172,19 @@ const Header = () => {
                     );
                   }
                 })}
+                
+                {/* Mobile-only actions */}
+                <div className="border-t border-gray-700 mt-4 pt-4 px-4">
+                  <div className="flex items-center justify-between">
+                    <button className="text-white hover:text-primary transition-colors flex items-center gap-2">
+                      <Search className="w-5 h-5" />
+                      <span className="font-display font-bold">Search</span>
+                    </button>
+                    <div className="text-white">
+                      <ShoppingCartTrigger />
+                    </div>
+                  </div>
+                </div>
               </nav>
             </div>
           )}
