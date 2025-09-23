@@ -18,11 +18,7 @@ const Hats: FC = () => {
       <section className="relative py-16 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1529958030586-3aae4ca485ff?ixlib=rb-4.0.3')] bg-cover bg-center opacity-15"></div>
         <div className="relative container mx-auto px-4 text-center text-white">
-          <div className="mb-4">
-            <Badge variant="secondary" className="mb-4 bg-primary/20 text-primary border-primary">
-              🧢 Hats Collection
-            </Badge>
-          </div>
+          {/* Removed badge above hero title as requested */}
           <h1 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-4">
             Truth Matters Hats
           </h1>

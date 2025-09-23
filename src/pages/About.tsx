@@ -1,13 +1,18 @@
 import { FC } from "react";
 import Header from "@/components/Header";
+import heroBg from "@/assets/hero-bg.jpg";
+import serviceBg from "@/assets/service-bg.jpg";
 import Footer from "@/components/Footer";
 
 const About: FC = () => {
   return (
-    <div className="hero-flag-background min-h-screen">
+    <div className="min-h-screen relative">
+      <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: `url(${serviceBg})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.4, zIndex: -10 }}></div>
+      <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: `url(/about-bg.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.5, zIndex: -10 }}></div>
       <Header />
-      <header className="py-40 text-center bg-white/95 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
+      <section className="relative py-40 text-center">
+        <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.6, zIndex: -1 }}></div>
+        <div className="relative container mx-auto px-4">
           <h1 className="font-display text-5xl font-bold tracking-tight text-black">
             About Us
           </h1>
@@ -16,7 +21,7 @@ const About: FC = () => {
             responders.
           </p>
         </div>
-      </header>
+      </section>
 
       <main className="container mx-auto max-w-4xl py-24">
         <div className="prose prose-lg mx-auto text-center">

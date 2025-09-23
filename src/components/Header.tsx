@@ -14,7 +14,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isShopDropdownOpen, setIsShopDropdownOpen] = useState(false);
 
-  const navItems = [
+  const leftNavItems = [
     {
       label: "SHOP",
       href: "/all-products",
@@ -29,6 +29,11 @@ const Header = () => {
         { label: "Accessories", href: "/accessories" }
       ]
     },
+    { label: "MENS", href: "/mens" },
+    { label: "WOMENS", href: "/womens" },
+    { label: "ACCESSORIES", href: "/accessories" },
+  ];
+  const rightNavItems = [
     { label: "ABOUT", href: "/about" },
     { label: "CAUSES", href: "/causes" },
     { label: "CONTACT", href: "/contact" },
@@ -39,9 +44,9 @@ const Header = () => {
       <header className="bg-black">
         <div className="container mx-auto px-4">
           <div className="relative flex items-center justify-center h-32">
-            {/* Desktop Navigation */}
+            {/* Left Desktop Navigation */}
             <nav className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 items-center space-x-8">
-              {navItems.map((item) => {
+              {leftNavItems.map((item) => {
                 if (item.submenu) {
                   return (
                     <DropdownMenu key={item.label}>
@@ -75,6 +80,19 @@ const Header = () => {
                   );
                 }
               })}
+            </nav>
+
+            {/* Right Desktop Navigation */}
+            <nav className="hidden md:flex absolute right-40 top-1/2 -translate-y-1/2 items-center space-x-8">
+              {rightNavItems.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="font-display text-lg font-bold text-white hover:text-primary transition-colors duration-200 tracking-wide"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
 
             {/* Logo */}

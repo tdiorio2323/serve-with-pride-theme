@@ -21,12 +21,7 @@ const Womens: FC = () => {
       <section className="relative py-16 bg-gradient-to-r from-rose-900 via-slate-800 to-slate-900">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3')] bg-cover bg-center opacity-15"></div>
         <div className="relative container mx-auto px-4 text-center text-white">
-          <div className="mb-4">
-            <Badge variant="secondary" className="mb-4 bg-primary/20 text-primary border-primary">
-              <Heart className="w-4 h-4 mr-2" />
-              Women's Collection
-            </Badge>
-          </div>
+          {/* Removed badge above hero title as requested */}
           <h1 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-4">
             Women's Truth Matters
           </h1>

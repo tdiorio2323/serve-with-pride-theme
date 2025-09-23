@@ -23,7 +23,7 @@ export const ShoppingCartTrigger = () => {
       className="relative"
       onClick={toggleCart}
     >
-      <ShoppingCartIcon className="h-4 w-4" />
+      <ShoppingCartIcon className="h-4 w-4 text-red-600" />
       {itemCount > 0 && (
         <Badge
           variant="destructive"
