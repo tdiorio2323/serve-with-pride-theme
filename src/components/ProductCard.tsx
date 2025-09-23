@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useCart } from "@/contexts/CartContext";
 import { Product } from "@/data/products";
-import { ShoppingCart, Eye } from "lucide-react";
+import { ShoppingCart, Eye, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
 
 interface ProductCardProps {
@@ -50,11 +51,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <div className="group">
         <div className="bg-card rounded-lg border border-border overflow-hidden transition-all duration-500 transform hover:-translate-y-3 hover:scale-105" style={{ boxShadow: 'var(--shadow-card)' }}>
           <div className="relative">
-            <img
-              src={product.images[0] || '/placeholder-image.jpg'}
-              alt={product.name}
-              className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-            />
+            <Link to={`/product/${product.id}`}>
+              <img
+                src={product.images[0] || '/placeholder-image.jpg'}
+                alt={product.name}
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110 cursor-pointer"
+              />
+            </Link>
             {product.category && (
               <Badge
                 variant="secondary"
@@ -76,9 +79,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
 
           <div className="p-6">
-            <h3 className="font-display text-xl font-bold text-foreground mb-2 tracking-wide">
-              {product.name}
-            </h3>
+            <Link to={`/product/${product.id}`}>
+              <h3 className="font-display text-xl font-bold text-foreground mb-2 tracking-wide hover:text-primary transition-colors cursor-pointer">
+                {product.name}
+              </h3>
+            </Link>
             <p className="font-body text-muted-foreground text-sm mb-4">
               {product.description}
             </p>
@@ -122,13 +127,25 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               </div>
             </div>
 
-            <Button
-              onClick={handleAddToCart}
-              className="w-full font-display font-bold tracking-wide"
-            >
-              <ShoppingCart className="w-4 h-4 mr-2" />
-              ADD TO CART
-            </Button>
+            <div className="space-y-2">
+              <Button
+                onClick={handleAddToCart}
+                className="w-full font-display font-bold tracking-wide"
+              >
+                <ShoppingCart className="w-4 h-4 mr-2" />
+                ADD TO CART
+              </Button>
+
+              <Link to={`/product/${product.id}`} className="block">
+                <Button
+                  variant="outline"
+                  className="w-full font-display font-bold tracking-wide"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  VIEW DETAILS
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -127,8 +127,25 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMobileMenuOpen && (
-            <div className="md:hidden absolute top-full left-0 right-0 bg-black border-t border-gray-700 z-50">
-              <nav className="flex flex-col py-4">
+            <div className="md:hidden fixed inset-0 bg-black/95 backdrop-blur-sm z-50">
+              {/* Mobile Menu Header */}
+              <div className="flex items-center justify-between p-4 border-b border-gray-700">
+                <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
+                  <img
+                    src="/lovable-uploads/90530307-3214-4d21-8704-4884a059a14b.png"
+                    alt="Truth Matters Logo"
+                    className="h-12 w-auto object-contain"
+                  />
+                </Link>
+                <button
+                  className="p-2 text-white hover:text-primary transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <X size={24} />
+                </button>
+              </div>
+
+              <nav className="flex flex-col py-4 flex-1 overflow-y-auto">
                 {[...leftNavItems, ...rightNavItems].map((item) => {
                   if (item.submenu) {
                     return (
