@@ -1,1 +1,1 @@
-export {default} from './layout/header';
+export {default} from '../../components/layout/header';
