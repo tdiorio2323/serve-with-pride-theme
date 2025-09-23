@@ -1,0 +1,254 @@
+[
+  {
+    "id": "american-flag",
+    "title": "American Flag Collection",
+    "handle": "american-flag",
+    "description": "Show your patriotic pride with our American flag designs. From distressed vintage looks to bold eagle graphics.",
+    "image": {
+      "id": "american-flag-hero",
+      "url": "/images/collections/american-flag-hero.jpg",
+      "altText": "American Flag Collection Hero",
+      "width": 1200,
+      "height": 600
+    },
+    "products": [],
+    "seo": {
+      "title": "American Flag Shirts & Patriotic Apparel | Truth Matters",
+      "description": "Shop our American Flag collection featuring patriotic tees, distressed flag designs, and eagle graphics. Made for true patriots."
+    },
+    "sortOrder": "best-selling",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "first-responder",
+    "title": "First Responder Heroes",
+    "handle": "first-responder",
+    "description": "Honoring police, firefighters, EMTs, and all first responders who put their lives on the line for our communities.",
+    "image": {
+      "id": "first-responder-hero",
+      "url": "/images/collections/first-responder-hero.jpg",
+      "altText": "First Responder Heroes Collection",
+      "width": 1200,
+      "height": 600
+    },
+    "products": [],
+    "seo": {
+      "title": "First Responder Shirts | Police & Firefighter Apparel | Truth Matters",
+      "description": "Support first responders with our collection of police, firefighter, and EMS apparel. Honor those who serve."
+    },
+    "sortOrder": "best-selling",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "second-amendment",
+    "title": "Second Amendment Rights",
+    "handle": "second-amendment",
+    "description": "Defend your constitutional rights. Shall not be infringed. For patriots who believe in the 2nd Amendment.",
+    "image": {
+      "id": "2a-hero",
+      "url": "/images/collections/second-amendment-hero.jpg",
+      "altText": "Second Amendment Rights Collection",
+      "width": 1200,
+      "height": 600
+    },
+    "products": [],
+    "seo": {
+      "title": "Second Amendment Shirts & 2A Rights Apparel | Truth Matters",
+      "description": "Defend the 2nd Amendment with our constitutional rights apparel. Perfect for gun rights supporters and patriots."
+    },
+    "sortOrder": "best-selling",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "conservative",
+    "title": "Conservative Pride",
+    "handle": "conservative",
+    "description": "Stand strong with conservative values. MAGA, Trump 2024, and traditional American principles.",
+    "image": {
+      "id": "conservative-hero",
+      "url": "/images/collections/conservative-hero.jpg",
+      "altText": "Conservative Pride Collection",
+      "width": 1200,
+      "height": 600
+    },
+    "products": [],
+    "seo": {
+      "title": "Conservative Shirts & MAGA Apparel | Trump 2024 | Truth Matters",
+      "description": "Show your conservative pride with MAGA shirts, Trump 2024 gear, and traditional American values apparel."
+    },
+    "sortOrder": "created",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "veteran",
+    "title": "Veteran Tribute",
+    "handle": "veteran",
+    "description": "Honoring those who served our great nation. Support veterans and veteran-owned businesses.",
+    "image": {
+      "id": "veteran-hero",
+      "url": "/images/collections/veteran-hero.jpg",
+      "altText": "Veteran Tribute Collection",
+      "width": 1200,
+      "height": 600
+    },
+    "products": [],
+    "seo": {
+      "title": "Veteran Shirts & Military Apparel | Support Veterans | Truth Matters",
+      "description": "Honor veterans with our military-inspired apparel. Support those who served with pride and dignity."
+    },
+    "sortOrder": "best-selling",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "usa-made",
+    "title": "Made in USA",
+    "handle": "usa-made",
+    "description": "Proudly manufactured in America. Supporting American workers and American quality.",
+    "image": {
+      "id": "usa-made-hero",
+      "url": "/images/collections/usa-made-hero.jpg",
+      "altText": "Made in USA Collection",
+      "width": 1200,
+      "height": 600
+    },
+    "products": [],
+    "seo": {
+      "title": "Made in USA Apparel | American Made Clothing | Truth Matters",
+      "description": "Support American manufacturing with our Made in USA collection. Quality clothing made by American workers."
+    },
+    "sortOrder": "best-selling",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "bestsellers",
+    "title": "Best Sellers",
+    "handle": "bestsellers",
+    "description": "Our most popular patriotic designs. The favorites that keep selling out.",
+    "image": {
+      "id": "bestsellers-hero",
+      "url": "/images/collections/bestsellers-hero.jpg",
+      "altText": "Best Sellers Collection",
+      "width": 1200,
+      "height": 600
+    },
+    "products": [],
+    "seo": {
+      "title": "Best Selling Patriotic Shirts | Most Popular Designs | Truth Matters",
+      "description": "Shop our best-selling patriotic apparel. The most popular designs that keep patriots coming back."
+    },
+    "sortOrder": "best-selling",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "limited-drops",
+    "title": "Limited Edition Drops",
+    "handle": "limited-drops",
+    "description": "Exclusive designs available for a limited time. Get them before they're gone forever.",
+    "image": {
+      "id": "limited-drops-hero",
+      "url": "/images/collections/limited-drops-hero.jpg",
+      "altText": "Limited Edition Drops Collection",
+      "width": 1200,
+      "height": 600
+    },
+    "products": [],
+    "seo": {
+      "title": "Limited Edition Patriotic Shirts | Exclusive Drops | Truth Matters",
+      "description": "Shop exclusive limited edition patriotic designs. Available for a limited time only - don't miss out!"
+    },
+    "sortOrder": "created",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "24-hour-ship",
+    "title": "24-Hour Ship",
+    "handle": "24-hour-ship",
+    "description": "Need it fast? These items ship within 24 hours. No waiting around.",
+    "image": {
+      "id": "24h-ship-hero",
+      "url": "/images/collections/24h-ship-hero.jpg",
+      "altText": "24-Hour Ship Collection",
+      "width": 1200,
+      "height": 600
+    },
+    "products": [],
+    "seo": {
+      "title": "24-Hour Shipping | Fast Patriotic Apparel Delivery | Truth Matters",
+      "description": "Get your patriotic apparel fast with our 24-hour shipping collection. Quick delivery for urgent patriotic needs."
+    },
+    "sortOrder": "best-selling",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "grunge",
+    "title": "Grunge & Distressed",
+    "handle": "grunge",
+    "description": "Weathered, battle-tested designs with that worn-in look. Grunge patriotic style.",
+    "image": {
+      "id": "grunge-hero",
+      "url": "/images/collections/grunge-hero.jpg",
+      "altText": "Grunge & Distressed Collection",
+      "width": 1200,
+      "height": 600
+    },
+    "products": [],
+    "seo": {
+      "title": "Grunge Patriotic Shirts | Distressed American Apparel | Truth Matters",
+      "description": "Shop weathered and distressed patriotic designs with authentic grunge styling. Battle-tested looks for true patriots."
+    },
+    "sortOrder": "created",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "hoodies",
+    "title": "Hoodies & Sweatshirts",
+    "handle": "hoodies",
+    "description": "Premium heavyweight hoodies for cold weather patriots. Comfort meets patriotic pride.",
+    "image": {
+      "id": "hoodies-hero",
+      "url": "/images/collections/hoodies-hero.jpg",
+      "altText": "Hoodies & Sweatshirts Collection",
+      "width": 1200,
+      "height": 600
+    },
+    "products": [],
+    "seo": {
+      "title": "Patriotic Hoodies & Sweatshirts | Warm Patriotic Apparel | Truth Matters",
+      "description": "Stay warm with our patriotic hoodies and sweatshirts. Premium comfort for cold weather patriots."
+    },
+    "sortOrder": "best-selling",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "historical",
+    "title": "Historical Patriotic",
+    "handle": "historical",
+    "description": "Honor American history with designs celebrating our founding fathers and revolutionary spirit.",
+    "image": {
+      "id": "historical-hero",
+      "url": "/images/collections/historical-hero.jpg",
+      "altText": "Historical Patriotic Collection",
+      "width": 1200,
+      "height": 600
+    },
+    "products": [],
+    "seo": {
+      "title": "Historical Patriotic Shirts | Founding Fathers Apparel | Truth Matters",
+      "description": "Celebrate American history with our historical patriotic collection featuring founding fathers and revolutionary designs."
+    },
+    "sortOrder": "manual",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  }
+]

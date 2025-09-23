@@ -1,0 +1,386 @@
+{
+  "main": {
+    "id": "main-navigation",
+    "title": "Main Navigation",
+    "handle": "main",
+    "items": [
+      {
+        "id": "home",
+        "title": "Home",
+        "url": "/",
+        "type": "frontpage",
+        "target": "_self"
+      },
+      {
+        "id": "collections",
+        "title": "Collections",
+        "url": "/collections",
+        "type": "collection",
+        "target": "_self",
+        "items": [
+          {
+            "id": "american-flag",
+            "title": "American Flag",
+            "url": "/collections/american-flag",
+            "type": "collection",
+            "target": "_self"
+          },
+          {
+            "id": "first-responder",
+            "title": "First Responder Heroes",
+            "url": "/collections/first-responder",
+            "type": "collection", 
+            "target": "_self"
+          },
+          {
+            "id": "military",
+            "title": "Military & Veterans",
+            "url": "/collections/military",
+            "type": "collection",
+            "target": "_self"
+          },
+          {
+            "id": "law-enforcement",
+            "title": "Law Enforcement",
+            "url": "/collections/law-enforcement",
+            "type": "collection",
+            "target": "_self"
+          },
+          {
+            "id": "firefighter",
+            "title": "Firefighter",
+            "url": "/collections/firefighter",
+            "type": "collection",
+            "target": "_self"
+          },
+          {
+            "id": "ems-paramedic",
+            "title": "EMS & Paramedic",
+            "url": "/collections/ems-paramedic",
+            "type": "collection",
+            "target": "_self"
+          },
+          {
+            "id": "conservative",
+            "title": "Conservative Values",
+            "url": "/collections/conservative",
+            "type": "collection",
+            "target": "_self"
+          }
+        ]
+      },
+      {
+        "id": "truth-club",
+        "title": "Truth Club",
+        "url": "/truth-club",
+        "type": "page",
+        "target": "_self"
+      },
+      {
+        "id": "about",
+        "title": "Our Mission", 
+        "url": "/about",
+        "type": "page",
+        "target": "_self"
+      },
+      {
+        "id": "blog",
+        "title": "Patriot News",
+        "url": "/blog",
+        "type": "blog",
+        "target": "_self"
+      }
+    ]
+  },
+  "footer": {
+    "id": "footer-navigation",
+    "title": "Footer Navigation",
+    "handle": "footer",
+    "items": [
+      {
+        "id": "shop-section",
+        "title": "Shop",
+        "url": "#",
+        "items": [
+          {
+            "id": "all-products",
+            "title": "All Products",
+            "url": "/products",
+            "type": "product"
+          },
+          {
+            "id": "new-arrivals",
+            "title": "New Arrivals",
+            "url": "/collections/new-arrivals",
+            "type": "collection"
+          },
+          {
+            "id": "best-sellers",
+            "title": "Best Sellers",
+            "url": "/collections/best-sellers", 
+            "type": "collection"
+          },
+          {
+            "id": "sale-items",
+            "title": "Sale Items",
+            "url": "/collections/sale",
+            "type": "collection"
+          }
+        ]
+      },
+      {
+        "id": "support-section",
+        "title": "Support Our Heroes",
+        "url": "#",
+        "items": [
+          {
+            "id": "first-responders",
+            "title": "First Responders",
+            "url": "/collections/first-responder",
+            "type": "collection"
+          },
+          {
+            "id": "military-veterans",
+            "title": "Military & Veterans",
+            "url": "/collections/military",
+            "type": "collection"
+          },
+          {
+            "id": "law-enforcement",
+            "title": "Law Enforcement",
+            "url": "/collections/law-enforcement",
+            "type": "collection"
+          },
+          {
+            "id": "firefighters",
+            "title": "Firefighters",
+            "url": "/collections/firefighter",
+            "type": "collection"
+          }
+        ]
+      },
+      {
+        "id": "company-section",
+        "title": "Company",
+        "url": "#",
+        "items": [
+          {
+            "id": "about-us",
+            "title": "About Truth Matters",
+            "url": "/about",
+            "type": "page"
+          },
+          {
+            "id": "our-mission",
+            "title": "Our Mission",
+            "url": "/mission",
+            "type": "page"
+          },
+          {
+            "id": "contact-us",
+            "title": "Contact Us",
+            "url": "/contact",
+            "type": "page"
+          },
+          {
+            "id": "careers",
+            "title": "Join Our Team",
+            "url": "/careers",
+            "type": "page"
+          }
+        ]
+      },
+      {
+        "id": "customer-care-section",
+        "title": "Customer Care",
+        "url": "#",
+        "items": [
+          {
+            "id": "shipping-info",
+            "title": "Shipping Information", 
+            "url": "/shipping",
+            "type": "page"
+          },
+          {
+            "id": "returns-exchanges",
+            "title": "Returns & Exchanges",
+            "url": "/returns",
+            "type": "page"
+          },
+          {
+            "id": "size-guide",
+            "title": "Size Guide",
+            "url": "/size-guide",
+            "type": "page"
+          },
+          {
+            "id": "faq",
+            "title": "FAQ",
+            "url": "/faq",
+            "type": "page"
+          }
+        ]
+      },
+      {
+        "id": "legal-section",
+        "title": "Legal",
+        "url": "#",
+        "items": [
+          {
+            "id": "privacy-policy",
+            "title": "Privacy Policy",
+            "url": "/privacy-policy",
+            "type": "policy"
+          },
+          {
+            "id": "terms-of-service",
+            "title": "Terms of Service", 
+            "url": "/terms-of-service",
+            "type": "policy"
+          },
+          {
+            "id": "refund-policy",
+            "title": "Refund Policy",
+            "url": "/refund-policy", 
+            "type": "policy"
+          }
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "id": "mobile-navigation",
+    "title": "Mobile Navigation",
+    "handle": "mobile",
+    "items": [
+      {
+        "id": "home-mobile",
+        "title": "Home",
+        "url": "/",
+        "type": "frontpage"
+      },
+      {
+        "id": "shop-mobile",
+        "title": "Shop All",
+        "url": "/collections",
+        "type": "collection"
+      },
+      {
+        "id": "american-flag-mobile",
+        "title": "American Flag",
+        "url": "/collections/american-flag",
+        "type": "collection"
+      },
+      {
+        "id": "first-responder-mobile", 
+        "title": "First Responders",
+        "url": "/collections/first-responder",
+        "type": "collection"
+      },
+      {
+        "id": "military-mobile",
+        "title": "Military & Veterans",
+        "url": "/collections/military",
+        "type": "collection"
+      },
+      {
+        "id": "truth-club-mobile",
+        "title": "Truth Club",
+        "url": "/truth-club",
+        "type": "page"
+      },
+      {
+        "id": "about-mobile",
+        "title": "Our Mission",
+        "url": "/about",
+        "type": "page"
+      },
+      {
+        "id": "contact-mobile",
+        "title": "Contact",
+        "url": "/contact",
+        "type": "page"
+      }
+    ]
+  },
+  "utility": {
+    "id": "utility-navigation",
+    "title": "Utility Navigation",
+    "handle": "utility",
+    "items": [
+      {
+        "id": "search",
+        "title": "Search",
+        "url": "/search",
+        "type": "http"
+      },
+      {
+        "id": "account",
+        "title": "Account",
+        "url": "/account",
+        "type": "http"
+      },
+      {
+        "id": "cart",
+        "title": "Cart",
+        "url": "/cart",
+        "type": "http"
+      },
+      {
+        "id": "wishlist",
+        "title": "Wishlist",
+        "url": "/wishlist", 
+        "type": "http"
+      }
+    ]
+  },
+  "social": {
+    "id": "social-navigation",
+    "title": "Social Media",
+    "handle": "social",
+    "items": [
+      {
+        "id": "facebook",
+        "title": "Facebook",
+        "url": "https://facebook.com/truthmattersstore",
+        "type": "http",
+        "target": "_blank"
+      },
+      {
+        "id": "twitter",
+        "title": "Twitter",
+        "url": "https://twitter.com/truthmattersstore",
+        "type": "http",
+        "target": "_blank"
+      },
+      {
+        "id": "instagram", 
+        "title": "Instagram",
+        "url": "https://instagram.com/truthmattersstore",
+        "type": "http",
+        "target": "_blank"
+      },
+      {
+        "id": "youtube",
+        "title": "YouTube",
+        "url": "https://youtube.com/truthmattersstore",
+        "type": "http",
+        "target": "_blank"
+      },
+      {
+        "id": "tiktok",
+        "title": "TikTok", 
+        "url": "https://tiktok.com/@truthmattersstore",
+        "type": "http",
+        "target": "_blank"
+      },
+      {
+        "id": "telegram",
+        "title": "Telegram",
+        "url": "https://t.me/truthmattersstore",
+        "type": "http",
+        "target": "_blank"
+      }
+    ]
+  }
+}

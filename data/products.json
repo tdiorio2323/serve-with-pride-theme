@@ -1,0 +1,698 @@
+[
+  {
+    "id": "american-eagle-freedom-tee",
+    "title": "American Eagle Freedom Tee",
+    "handle": "american-eagle-freedom-tee",
+    "description": "Bold American eagle design with 'Land of the Free, Home of the Brave' - perfect for patriots who stand for freedom.",
+    "price": 29.99,
+    "compareAtPrice": 39.99,
+    "images": [
+      {
+        "id": "eagle-1",
+        "url": "/images/products/eagle-freedom-tee.jpg",
+        "altText": "American Eagle Freedom Tee - Black",
+        "width": 800,
+        "height": 800
+      }
+    ],
+    "variants": [
+      {
+        "id": "eagle-s-black",
+        "title": "Small / Black",
+        "price": 29.99,
+        "compareAtPrice": 39.99,
+        "availableForSale": true,
+        "quantityAvailable": 15,
+        "selectedOptions": [
+          {"name": "Size", "value": "S"},
+          {"name": "Color", "value": "Black"}
+        ]
+      },
+      {
+        "id": "eagle-m-black",
+        "title": "Medium / Black",
+        "price": 29.99,
+        "compareAtPrice": 39.99,
+        "availableForSale": true,
+        "quantityAvailable": 12,
+        "selectedOptions": [
+          {"name": "Size", "value": "M"},
+          {"name": "Color", "value": "Black"}
+        ]
+      },
+      {
+        "id": "eagle-l-black",
+        "title": "Large / Black",
+        "price": 29.99,
+        "compareAtPrice": 39.99,
+        "availableForSale": true,
+        "quantityAvailable": 8,
+        "selectedOptions": [
+          {"name": "Size", "value": "L"},
+          {"name": "Color", "value": "Black"}
+        ]
+      }
+    ],
+    "tags": ["american-flag", "eagle", "patriotic", "freedom", "24h"],
+    "vendor": "Truth Matters",
+    "productType": "T-Shirt",
+    "availableForSale": true,
+    "totalInventory": 35,
+    "seo": {
+      "title": "American Eagle Freedom Tee - Patriotic T-Shirt",
+      "description": "Show your patriotic pride with our American Eagle Freedom Tee. Perfect for veterans, patriots, and freedom lovers."
+    },
+    "collections": ["american-flag", "bestsellers"],
+    "badges": [
+      {"type": "24h", "label": "24-Hour Ship", "urgent": true},
+      {"type": "sale", "label": "25% Off", "urgent": false}
+    ],
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2024-01-15T10:00:00Z"
+  },
+  {
+    "id": "thin-blue-line-tribute",
+    "title": "Thin Blue Line Tribute Tee",
+    "handle": "thin-blue-line-tribute",
+    "description": "Honor our law enforcement heroes with this premium thin blue line design. Support those who protect and serve.",
+    "price": 27.99,
+    "images": [
+      {
+        "id": "tbl-1",
+        "url": "/images/products/thin-blue-line.jpg",
+        "altText": "Thin Blue Line Tribute Tee",
+        "width": 800,
+        "height": 800
+      }
+    ],
+    "variants": [
+      {
+        "id": "tbl-s-navy",
+        "title": "Small / Navy",
+        "price": 27.99,
+        "availableForSale": true,
+        "quantityAvailable": 20,
+        "selectedOptions": [
+          {"name": "Size", "value": "S"},
+          {"name": "Color", "value": "Navy"}
+        ]
+      },
+      {
+        "id": "tbl-m-navy",
+        "title": "Medium / Navy",
+        "price": 27.99,
+        "availableForSale": true,
+        "quantityAvailable": 25,
+        "selectedOptions": [
+          {"name": "Size", "value": "M"},
+          {"name": "Color", "value": "Navy"}
+        ]
+      },
+      {
+        "id": "tbl-l-navy",
+        "title": "Large / Navy",
+        "price": 27.99,
+        "availableForSale": true,
+        "quantityAvailable": 18,
+        "selectedOptions": [
+          {"name": "Size", "value": "L"},
+          {"name": "Color", "value": "Navy"}
+        ]
+      },
+      {
+        "id": "tbl-xl-navy",
+        "title": "Extra Large / Navy",
+        "price": 27.99,
+        "availableForSale": true,
+        "quantityAvailable": 15,
+        "selectedOptions": [
+          {"name": "Size", "value": "XL"},
+          {"name": "Color", "value": "Navy"}
+        ]
+      }
+    ],
+    "tags": ["police", "law-enforcement", "thin-blue-line", "first-responder", "24h"],
+    "vendor": "Truth Matters",
+    "productType": "T-Shirt",
+    "availableForSale": true,
+    "totalInventory": 78,
+    "seo": {
+      "title": "Thin Blue Line Tribute Tee - Police Support Shirt",
+      "description": "Support law enforcement with our Thin Blue Line Tribute Tee. Perfect for police families and supporters."
+    },
+    "collections": ["first-responder", "bestsellers"],
+    "badges": [
+      {"type": "24h", "label": "24-Hour Ship", "urgent": true},
+      {"type": "bestseller", "label": "Best Seller", "urgent": false}
+    ],
+    "createdAt": "2024-01-12T09:30:00Z",
+    "updatedAt": "2024-01-12T09:30:00Z"
+  },
+  {
+    "id": "fire-dept-brotherhood",
+    "title": "Fire Department Brotherhood Tee",
+    "handle": "fire-dept-brotherhood",
+    "description": "Honoring the brave men and women who run toward danger. Brotherhood, courage, and service.",
+    "price": 28.99,
+    "images": [
+      {
+        "id": "fire-1",
+        "url": "/images/products/fire-brotherhood.jpg",
+        "altText": "Fire Department Brotherhood Tee",
+        "width": 800,
+        "height": 800
+      }
+    ],
+    "variants": [
+      {
+        "id": "fire-s-red",
+        "title": "Small / Red",
+        "price": 28.99,
+        "availableForSale": true,
+        "quantityAvailable": 12,
+        "selectedOptions": [
+          {"name": "Size", "value": "S"},
+          {"name": "Color", "value": "Red"}
+        ]
+      },
+      {
+        "id": "fire-m-red",
+        "title": "Medium / Red",
+        "price": 28.99,
+        "availableForSale": true,
+        "quantityAvailable": 22,
+        "selectedOptions": [
+          {"name": "Size", "value": "M"},
+          {"name": "Color", "value": "Red"}
+        ]
+      },
+      {
+        "id": "fire-l-red",
+        "title": "Large / Red",
+        "price": 28.99,
+        "availableForSale": true,
+        "quantityAvailable": 19,
+        "selectedOptions": [
+          {"name": "Size", "value": "L"},
+          {"name": "Color", "value": "Red"}
+        ]
+      }
+    ],
+    "tags": ["firefighter", "fire-department", "first-responder", "brotherhood", "24h"],
+    "vendor": "Truth Matters",
+    "productType": "T-Shirt",
+    "availableForSale": true,
+    "totalInventory": 53,
+    "seo": {
+      "title": "Fire Department Brotherhood Tee - Firefighter Support Shirt",
+      "description": "Honor firefighters with our Fire Department Brotherhood Tee. Perfect for fire families and supporters."
+    },
+    "collections": ["first-responder"],
+    "badges": [
+      {"type": "24h", "label": "24-Hour Ship", "urgent": true}
+    ],
+    "createdAt": "2024-01-10T14:20:00Z",
+    "updatedAt": "2024-01-10T14:20:00Z"
+  },
+  {
+    "id": "trump-2024-victory-tee",
+    "title": "Trump 2024 Victory Tee",
+    "handle": "trump-2024-victory-tee",
+    "description": "Make America Great Again with this bold 2024 campaign tee. For patriots ready to take back America.",
+    "price": 32.99,
+    "compareAtPrice": 42.99,
+    "images": [
+      {
+        "id": "trump-1",
+        "url": "/images/products/trump-2024-victory.jpg",
+        "altText": "Trump 2024 Victory Tee",
+        "width": 800,
+        "height": 800
+      }
+    ],
+    "variants": [
+      {
+        "id": "trump-s-red",
+        "title": "Small / Red",
+        "price": 32.99,
+        "compareAtPrice": 42.99,
+        "availableForSale": true,
+        "quantityAvailable": 8,
+        "selectedOptions": [
+          {"name": "Size", "value": "S"},
+          {"name": "Color", "value": "Red"}
+        ]
+      },
+      {
+        "id": "trump-m-red",
+        "title": "Medium / Red",
+        "price": 32.99,
+        "compareAtPrice": 42.99,
+        "availableForSale": true,
+        "quantityAvailable": 5,
+        "selectedOptions": [
+          {"name": "Size", "value": "M"},
+          {"name": "Color", "value": "Red"}
+        ]
+      },
+      {
+        "id": "trump-l-red",
+        "title": "Large / Red",
+        "price": 32.99,
+        "compareAtPrice": 42.99,
+        "availableForSale": true,
+        "quantityAvailable": 3,
+        "selectedOptions": [
+          {"name": "Size", "value": "L"},
+          {"name": "Color", "value": "Red"}
+        ]
+      }
+    ],
+    "tags": ["trump", "2024", "maga", "conservative", "election", "limited"],
+    "vendor": "Truth Matters",
+    "productType": "T-Shirt",
+    "availableForSale": true,
+    "totalInventory": 16,
+    "seo": {
+      "title": "Trump 2024 Victory Tee - MAGA Campaign Shirt",
+      "description": "Support Trump 2024 with our Victory Tee. Perfect for rallies, events, and showing conservative pride."
+    },
+    "collections": ["conservative", "limited-drops"],
+    "badges": [
+      {"type": "limited", "label": "Limited Edition", "urgent": true},
+      {"type": "24h", "label": "24-Hour Ship", "urgent": true},
+      {"type": "sale", "label": "23% Off", "urgent": false}
+    ],
+    "createdAt": "2024-01-20T16:00:00Z",
+    "updatedAt": "2024-01-20T16:00:00Z"
+  },
+  {
+    "id": "second-amendment-defender",
+    "title": "Second Amendment Defender Tee",
+    "handle": "second-amendment-defender",
+    "description": "Defend the Constitution. Protect the 2nd Amendment. Shall not be infringed.",
+    "price": 26.99,
+    "images": [
+      {
+        "id": "2a-1",
+        "url": "/images/products/second-amendment.jpg",
+        "altText": "Second Amendment Defender Tee",
+        "width": 800,
+        "height": 800
+      }
+    ],
+    "variants": [
+      {
+        "id": "2a-s-black",
+        "title": "Small / Black",
+        "price": 26.99,
+        "availableForSale": true,
+        "quantityAvailable": 30,
+        "selectedOptions": [
+          {"name": "Size", "value": "S"},
+          {"name": "Color", "value": "Black"}
+        ]
+      },
+      {
+        "id": "2a-m-black",
+        "title": "Medium / Black",
+        "price": 26.99,
+        "availableForSale": true,
+        "quantityAvailable": 45,
+        "selectedOptions": [
+          {"name": "Size", "value": "M"},
+          {"name": "Color", "value": "Black"}
+        ]
+      },
+      {
+        "id": "2a-l-black",
+        "title": "Large / Black",
+        "price": 26.99,
+        "availableForSale": true,
+        "quantityAvailable": 38,
+        "selectedOptions": [
+          {"name": "Size", "value": "L"},
+          {"name": "Color", "value": "Black"}
+        ]
+      },
+      {
+        "id": "2a-xl-black",
+        "title": "Extra Large / Black",
+        "price": 26.99,
+        "availableForSale": true,
+        "quantityAvailable": 25,
+        "selectedOptions": [
+          {"name": "Size", "value": "XL"},
+          {"name": "Color", "value": "Black"}
+        ]
+      }
+    ],
+    "tags": ["second-amendment", "2a", "constitutional", "gun-rights", "freedom"],
+    "vendor": "Truth Matters",
+    "productType": "T-Shirt",
+    "availableForSale": true,
+    "totalInventory": 138,
+    "seo": {
+      "title": "Second Amendment Defender Tee - 2A Rights Shirt",
+      "description": "Defend your constitutional rights with our Second Amendment Defender Tee. Perfect for gun rights supporters."
+    },
+    "collections": ["second-amendment", "bestsellers"],
+    "badges": [
+      {"type": "bestseller", "label": "Best Seller", "urgent": false}
+    ],
+    "createdAt": "2024-01-08T11:15:00Z",
+    "updatedAt": "2024-01-08T11:15:00Z"
+  },
+  {
+    "id": "veteran-owned-pride",
+    "title": "Veteran Owned & Proud Tee",
+    "handle": "veteran-owned-pride",
+    "description": "Supporting veteran-owned businesses and the warriors who served our great nation with honor.",
+    "price": 29.99,
+    "images": [
+      {
+        "id": "vet-1",
+        "url": "/images/products/veteran-owned.jpg",
+        "altText": "Veteran Owned & Proud Tee",
+        "width": 800,
+        "height": 800
+      }
+    ],
+    "variants": [
+      {
+        "id": "vet-s-olive",
+        "title": "Small / Olive",
+        "price": 29.99,
+        "availableForSale": true,
+        "quantityAvailable": 18,
+        "selectedOptions": [
+          {"name": "Size", "value": "S"},
+          {"name": "Color", "value": "Olive"}
+        ]
+      },
+      {
+        "id": "vet-m-olive",
+        "title": "Medium / Olive",
+        "price": 29.99,
+        "availableForSale": true,
+        "quantityAvailable": 32,
+        "selectedOptions": [
+          {"name": "Size", "value": "M"},
+          {"name": "Color", "value": "Olive"}
+        ]
+      },
+      {
+        "id": "vet-l-olive",
+        "title": "Large / Olive",
+        "price": 29.99,
+        "availableForSale": true,
+        "quantityAvailable": 28,
+        "selectedOptions": [
+          {"name": "Size", "value": "L"},
+          {"name": "Color", "value": "Olive"}
+        ]
+      }
+    ],
+    "tags": ["veteran", "military", "veteran-owned", "support-veterans", "24h", "usa-made"],
+    "vendor": "Truth Matters",
+    "productType": "T-Shirt",
+    "availableForSale": true,
+    "totalInventory": 78,
+    "seo": {
+      "title": "Veteran Owned & Proud Tee - Military Support Shirt",
+      "description": "Support veterans and veteran-owned businesses with our Veteran Owned & Proud Tee."
+    },
+    "collections": ["veteran", "usa-made"],
+    "badges": [
+      {"type": "usa-made", "label": "Made in USA", "urgent": false},
+      {"type": "24h", "label": "24-Hour Ship", "urgent": true}
+    ],
+    "createdAt": "2024-01-05T13:45:00Z",
+    "updatedAt": "2024-01-05T13:45:00Z"
+  },
+  {
+    "id": "dont-tread-on-me-flag",
+    "title": "Don't Tread On Me Flag Tee",
+    "handle": "dont-tread-on-me-flag",
+    "description": "Classic Gadsden Flag design. A symbol of American liberty and resistance to tyranny since 1775.",
+    "price": 27.99,
+    "images": [
+      {
+        "id": "gadsden-1",
+        "url": "/images/products/dont-tread-on-me.jpg",
+        "altText": "Don't Tread On Me Flag Tee",
+        "width": 800,
+        "height": 800
+      }
+    ],
+    "variants": [
+      {
+        "id": "gadsden-s-yellow",
+        "title": "Small / Yellow",
+        "price": 27.99,
+        "availableForSale": true,
+        "quantityAvailable": 14,
+        "selectedOptions": [
+          {"name": "Size", "value": "S"},
+          {"name": "Color", "value": "Yellow"}
+        ]
+      },
+      {
+        "id": "gadsden-m-yellow",
+        "title": "Medium / Yellow",
+        "price": 27.99,
+        "availableForSale": true,
+        "quantityAvailable": 26,
+        "selectedOptions": [
+          {"name": "Size", "value": "M"},
+          {"name": "Color", "value": "Yellow"}
+        ]
+      },
+      {
+        "id": "gadsden-l-yellow",
+        "title": "Large / Yellow",
+        "price": 27.99,
+        "availableForSale": true,
+        "quantityAvailable": 19,
+        "selectedOptions": [
+          {"name": "Size", "value": "L"},
+          {"name": "Color", "value": "Yellow"}
+        ]
+      }
+    ],
+    "tags": ["gadsden-flag", "dont-tread-on-me", "liberty", "patriotic", "historical"],
+    "vendor": "Truth Matters",
+    "productType": "T-Shirt",
+    "availableForSale": true,
+    "totalInventory": 59,
+    "seo": {
+      "title": "Don't Tread On Me Flag Tee - Gadsden Flag Shirt",
+      "description": "Show your love of liberty with our Don't Tread On Me Flag Tee featuring the historic Gadsden Flag."
+    },
+    "collections": ["american-flag", "historical"],
+    "badges": [],
+    "createdAt": "2024-01-03T10:30:00Z",
+    "updatedAt": "2024-01-03T10:30:00Z"
+  },
+  {
+    "id": "we-the-people-constitution",
+    "title": "We The People Constitution Tee",
+    "handle": "we-the-people-constitution",
+    "description": "Defend the Constitution. Honor the founding fathers. We The People will not be silenced.",
+    "price": 28.99,
+    "images": [
+      {
+        "id": "constitution-1",
+        "url": "/images/products/we-the-people.jpg",
+        "altText": "We The People Constitution Tee",
+        "width": 800,
+        "height": 800
+      }
+    ],
+    "variants": [
+      {
+        "id": "const-s-navy",
+        "title": "Small / Navy",
+        "price": 28.99,
+        "availableForSale": true,
+        "quantityAvailable": 22,
+        "selectedOptions": [
+          {"name": "Size", "value": "S"},
+          {"name": "Color", "value": "Navy"}
+        ]
+      },
+      {
+        "id": "const-m-navy",
+        "title": "Medium / Navy",
+        "price": 28.99,
+        "availableForSale": true,
+        "quantityAvailable": 35,
+        "selectedOptions": [
+          {"name": "Size", "value": "M"},
+          {"name": "Color", "value": "Navy"}
+        ]
+      },
+      {
+        "id": "const-l-navy",
+        "title": "Large / Navy",
+        "price": 28.99,
+        "availableForSale": true,
+        "quantityAvailable": 28,
+        "selectedOptions": [
+          {"name": "Size", "value": "L"},
+          {"name": "Color", "value": "Navy"}
+        ]
+      }
+    ],
+    "tags": ["constitution", "we-the-people", "founding-fathers", "conservative", "patriotic"],
+    "vendor": "Truth Matters",
+    "productType": "T-Shirt",
+    "availableForSale": true,
+    "totalInventory": 85,
+    "seo": {
+      "title": "We The People Constitution Tee - Patriotic Constitutional Shirt",
+      "description": "Honor the Constitution with our We The People Tee. Perfect for patriots and constitutional conservatives."
+    },
+    "collections": ["conservative", "historical"],
+    "badges": [],
+    "createdAt": "2024-01-01T12:00:00Z",
+    "updatedAt": "2024-01-01T12:00:00Z"
+  },
+  {
+    "id": "back-the-blue-support",
+    "title": "Back The Blue Support Hoodie",
+    "handle": "back-the-blue-support",
+    "description": "Premium heavyweight hoodie showing unwavering support for law enforcement. Quality comfort for true patriots.",
+    "price": 54.99,
+    "compareAtPrice": 69.99,
+    "images": [
+      {
+        "id": "btb-hoodie-1",
+        "url": "/images/products/back-the-blue-hoodie.jpg",
+        "altText": "Back The Blue Support Hoodie",
+        "width": 800,
+        "height": 800
+      }
+    ],
+    "variants": [
+      {
+        "id": "btb-s-navy",
+        "title": "Small / Navy",
+        "price": 54.99,
+        "compareAtPrice": 69.99,
+        "availableForSale": true,
+        "quantityAvailable": 8,
+        "selectedOptions": [
+          {"name": "Size", "value": "S"},
+          {"name": "Color", "value": "Navy"}
+        ]
+      },
+      {
+        "id": "btb-m-navy",
+        "title": "Medium / Navy",
+        "price": 54.99,
+        "compareAtPrice": 69.99,
+        "availableForSale": true,
+        "quantityAvailable": 12,
+        "selectedOptions": [
+          {"name": "Size", "value": "M"},
+          {"name": "Color", "value": "Navy"}
+        ]
+      },
+      {
+        "id": "btb-l-navy",
+        "title": "Large / Navy",
+        "price": 54.99,
+        "compareAtPrice": 69.99,
+        "availableForSale": true,
+        "quantityAvailable": 15,
+        "selectedOptions": [
+          {"name": "Size", "value": "L"},
+          {"name": "Color", "value": "Navy"}
+        ]
+      }
+    ],
+    "tags": ["police", "back-the-blue", "law-enforcement", "hoodie", "support", "24h"],
+    "vendor": "Truth Matters",
+    "productType": "Hoodie",
+    "availableForSale": true,
+    "totalInventory": 35,
+    "seo": {
+      "title": "Back The Blue Support Hoodie - Police Support Sweatshirt",
+      "description": "Show police support with our premium Back The Blue hoodie. Perfect for cold weather patriotism."
+    },
+    "collections": ["first-responder", "hoodies"],
+    "badges": [
+      {"type": "24h", "label": "24-Hour Ship", "urgent": true},
+      {"type": "sale", "label": "21% Off", "urgent": false}
+    ],
+    "createdAt": "2023-12-28T15:30:00Z",
+    "updatedAt": "2023-12-28T15:30:00Z"
+  },
+  {
+    "id": "american-flag-distressed",
+    "title": "American Flag Distressed Tee",
+    "handle": "american-flag-distressed",
+    "description": "Weathered American flag design representing the battles fought for our freedom. Vintage grunge style.",
+    "price": 31.99,
+    "images": [
+      {
+        "id": "flag-distressed-1",
+        "url": "/images/products/american-flag-distressed.jpg",
+        "altText": "American Flag Distressed Tee",
+        "width": 800,
+        "height": 800
+      }
+    ],
+    "variants": [
+      {
+        "id": "flag-dist-s-charcoal",
+        "title": "Small / Charcoal",
+        "price": 31.99,
+        "availableForSale": true,
+        "quantityAvailable": 16,
+        "selectedOptions": [
+          {"name": "Size", "value": "S"},
+          {"name": "Color", "value": "Charcoal"}
+        ]
+      },
+      {
+        "id": "flag-dist-m-charcoal",
+        "title": "Medium / Charcoal",
+        "price": 31.99,
+        "availableForSale": true,
+        "quantityAvailable": 24,
+        "selectedOptions": [
+          {"name": "Size", "value": "M"},
+          {"name": "Color", "value": "Charcoal"}
+        ]
+      },
+      {
+        "id": "flag-dist-l-charcoal",
+        "title": "Large / Charcoal",
+        "price": 31.99,
+        "availableForSale": true,
+        "quantityAvailable": 21,
+        "selectedOptions": [
+          {"name": "Size", "value": "L"},
+          {"name": "Color", "value": "Charcoal"}
+        ]
+      }
+    ],
+    "tags": ["american-flag", "distressed", "vintage", "grunge", "patriotic", "usa-made"],
+    "vendor": "Truth Matters",
+    "productType": "T-Shirt",
+    "availableForSale": true,
+    "totalInventory": 61,
+    "seo": {
+      "title": "American Flag Distressed Tee - Vintage Patriotic Shirt",
+      "description": "Honor America with our distressed flag tee featuring weathered vintage styling perfect for patriots."
+    },
+    "collections": ["american-flag", "usa-made", "grunge"],
+    "badges": [
+      {"type": "usa-made", "label": "Made in USA", "urgent": false}
+    ],
+    "createdAt": "2023-12-25T09:00:00Z",
+    "updatedAt": "2023-12-25T09:00:00Z"
+  }
+]

@@ -1,0 +1,210 @@
+[
+  {
+    "id": "truth-club-basic",
+    "title": "Truth Club Basic",
+    "description": "Essential patriotic gear delivered quarterly. Perfect for the everyday patriot who wants to stay equipped.",
+    "price": 29.99,
+    "interval": "quarter",
+    "intervalCount": 1,
+    "benefits": [
+      "Quarterly curated patriotic apparel",
+      "Exclusive Truth Club member designs",
+      "15% discount on all store purchases",
+      "First access to limited edition releases",
+      "Free shipping on all orders",
+      "Digital patriot newsletter and updates"
+    ],
+    "popular": false,
+    "products": [],
+    "image": {
+      "id": "truth-club-basic-hero",
+      "url": "/images/subscriptions/truth-club-basic.jpg",
+      "altText": "Truth Club Basic Subscription Box",
+      "width": 600,
+      "height": 400
+    }
+  },
+  {
+    "id": "truth-club-patriot",
+    "title": "Truth Club Patriot",
+    "description": "Premium monthly patriots box with exclusive gear, first responder items, and limited edition collectibles.",
+    "price": 49.99,
+    "interval": "month",
+    "intervalCount": 1,
+    "benefits": [
+      "Monthly premium patriotic gear box",
+      "First responder appreciation items",
+      "Limited edition pins and patches",
+      "Exclusive Truth Club patriot designs",
+      "20% discount on all store purchases",
+      "Priority customer support",
+      "Early access to flash sales",
+      "Free expedited shipping",
+      "Monthly patriot spotlight feature",
+      "Access to Truth Club private community"
+    ],
+    "popular": true,
+    "products": [],
+    "image": {
+      "id": "truth-club-patriot-hero",
+      "url": "/images/subscriptions/truth-club-patriot.jpg",
+      "altText": "Truth Club Patriot Monthly Box",
+      "width": 600,
+      "height": 400
+    }
+  },
+  {
+    "id": "truth-club-elite",
+    "title": "Truth Club Elite",
+    "description": "The ultimate patriot's arsenal. Premium tactical gear, exclusive collectibles, and VIP treatment for true patriots.",
+    "price": 99.99,
+    "interval": "month",
+    "intervalCount": 1,
+    "benefits": [
+      "Monthly elite tactical gear package",
+      "Exclusive military-grade accessories",
+      "Limited edition collectible items",
+      "Custom Truth Club Elite designs",
+      "25% discount on all store purchases",
+      "VIP customer service hotline",
+      "First access to all new products",
+      "Free 2-day shipping nationwide",
+      "Quarterly exclusive video content",
+      "Direct line to Truth Matters founders",
+      "Truth Club Elite member events access",
+      "Custom engraving on select items",
+      "Birthday month special surprise box"
+    ],
+    "popular": false,
+    "products": [],
+    "image": {
+      "id": "truth-club-elite-hero",
+      "url": "/images/subscriptions/truth-club-elite.jpg",
+      "altText": "Truth Club Elite Premium Box",
+      "width": 600,
+      "height": 400
+    }
+  },
+  {
+    "id": "first-responder-monthly",
+    "title": "First Responder Heroes",
+    "description": "Dedicated to our brave first responders. Monthly gear celebrating police, fire, EMS, and military heroes.",
+    "price": 39.99,
+    "interval": "month",
+    "intervalCount": 1,
+    "benefits": [
+      "Monthly first responder themed items",
+      "Rotating focus: Police, Fire, EMS, Military",
+      "Exclusive hero appreciation designs",
+      "Professional-grade accessories",
+      "20% discount on responder collections",
+      "Hero spotlight newsletter",
+      "Free shipping to station/base addresses",
+      "Donation to first responder charities",
+      "Badge buddy and patch collections",
+      "Access to responder-only community"
+    ],
+    "popular": false,
+    "products": [],
+    "image": {
+      "id": "first-responder-hero",
+      "url": "/images/subscriptions/first-responder-monthly.jpg",
+      "altText": "First Responder Heroes Monthly Box",
+      "width": 600,
+      "height": 400
+    }
+  },
+  {
+    "id": "america-first-annual",
+    "title": "America First Annual",
+    "description": "Annual subscription celebrating American greatness. Premium patriotic gear delivered every quarter with massive savings.",
+    "price": 179.99,
+    "interval": "year",
+    "intervalCount": 1,
+    "benefits": [
+      "Quarterly premium patriotic packages",
+      "Holiday-themed special editions",
+      "Founding Fathers collector series",
+      "Constitution and Bill of Rights items",
+      "30% discount on all store purchases",
+      "Annual Truth Matters calendar",
+      "Exclusive America First designs",
+      "Free shipping for entire year",
+      "Birthday month bonus item",
+      "Patriot history educational materials",
+      "Access to annual subscriber events",
+      "Custom America First membership card"
+    ],
+    "popular": false,
+    "products": [],
+    "image": {
+      "id": "america-first-annual-hero",
+      "url": "/images/subscriptions/america-first-annual.jpg",
+      "altText": "America First Annual Subscription",
+      "width": 600,
+      "height": 400
+    }
+  },
+  {
+    "id": "tactical-gear-monthly",
+    "title": "Tactical Gear Monthly",
+    "description": "Professional-grade tactical equipment and accessories for serious patriots. Military-inspired gear for the modern patriot.",
+    "price": 79.99,
+    "interval": "month",
+    "intervalCount": 1,
+    "benefits": [
+      "Monthly tactical gear and accessories",
+      "Military-grade equipment focus",
+      "Survival and preparedness items",
+      "Tactical apparel and patches",
+      "25% discount on tactical collections",
+      "Gear testing and review content",
+      "Expert tactical advice newsletter",
+      "Free expedited shipping",
+      "Access to tactical training content",
+      "Military surplus and collectibles",
+      "Tactical community forum access",
+      "Gear customization services"
+    ],
+    "popular": false,
+    "products": [],
+    "image": {
+      "id": "tactical-gear-monthly-hero",
+      "url": "/images/subscriptions/tactical-gear-monthly.jpg",
+      "altText": "Tactical Gear Monthly Subscription",
+      "width": 600,
+      "height": 400
+    }
+  },
+  {
+    "id": "family-patriot-plan",
+    "title": "Family Patriot Plan",
+    "description": "Patriotic gear for the whole family. Monthly box with items for adults and kids, teaching patriotic values together.",
+    "price": 59.99,
+    "interval": "month",
+    "intervalCount": 1,
+    "benefits": [
+      "Monthly family-friendly patriotic items",
+      "Adult and children's apparel included",
+      "Educational patriotic materials for kids",
+      "Family activity guides and games",
+      "20% discount on all family items",
+      "Seasonal holiday-themed packages",
+      "American history learning materials",
+      "Patriotic coloring books and activities",
+      "Family photo props and accessories",
+      "Access to family patriot community",
+      "Free shipping on family orders",
+      "Birthday surprises for all family members"
+    ],
+    "popular": false,
+    "products": [],
+    "image": {
+      "id": "family-patriot-hero",
+      "url": "/images/subscriptions/family-patriot-plan.jpg",
+      "altText": "Family Patriot Plan Subscription",
+      "width": 600,
+      "height": 400
+    }
+  }
+]
