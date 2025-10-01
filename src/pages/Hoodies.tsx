@@ -5,10 +5,131 @@ import { Filter, Grid, List, SortAsc } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ProductCard } from "@/components/ProductCard";
-import { getProductsByCategory } from "@/data/products";
 
 const Hoodies: FC = () => {
-  const hoodieProducts = getProductsByCategory('hoodie');
+  // Mock hoodie products - 8 products (2 rows x 4)
+  const hoodieProducts = [
+    {
+      id: 'hoodie-1',
+      name: 'Warrior Crest Hoodie',
+      description: 'For those who fight for what\'s right. Premium heavyweight hoodie.',
+      price: 54.99,
+      images: ['/truth-logo-1.png'],
+      category: 'hoodie' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Navy'],
+      tags: ['warrior', 'hoodie'],
+      featured: true,
+      inStock: true,
+      sku: 'HOO-001'
+    },
+    {
+      id: 'hoodie-2',
+      name: 'Victory Banner Hoodie',
+      description: 'Celebrating the triumph of truth over deception. Warm and comfortable.',
+      price: 54.99,
+      images: ['/truth-logo-2.png'],
+      category: 'hoodie' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Gray'],
+      tags: ['victory', 'banner'],
+      featured: true,
+      inStock: true,
+      sku: 'HOO-002'
+    },
+    {
+      id: 'hoodie-3',
+      name: 'Truth Logo Hoodie',
+      description: 'Show your support for truth with this classic hoodie featuring the Truth Matters logo.',
+      price: 54.99,
+      images: ['/truth-logo-3.png'],
+      category: 'hoodie' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Charcoal'],
+      tags: ['truth', 'logo'],
+      featured: false,
+      inStock: true,
+      sku: 'HOO-003'
+    },
+    {
+      id: 'hoodie-4',
+      name: 'Freedom Stripes Hoodie',
+      description: 'Celebrate freedom with bold stripes. Heavyweight and comfortable.',
+      price: 54.99,
+      images: ['/truth-logo-4.png'],
+      category: 'hoodie' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Red'],
+      tags: ['freedom', 'stripes'],
+      featured: false,
+      inStock: true,
+      sku: 'HOO-004'
+    },
+    {
+      id: 'hoodie-5',
+      name: 'Service Honor Hoodie',
+      description: 'Honor those who serve with this special edition hoodie. Premium quality.',
+      price: 54.99,
+      images: ['/truth-logo-5.png'],
+      category: 'hoodie' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Navy'],
+      tags: ['service', 'honor'],
+      featured: true,
+      inStock: true,
+      sku: 'HOO-005'
+    },
+    {
+      id: 'hoodie-6',
+      name: 'American Spirit Hoodie',
+      description: 'Embody the American spirit with this comfortable hoodie. Flag-inspired design.',
+      price: 54.99,
+      images: ['/truth-logo-6.png'],
+      category: 'hoodie' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Blue'],
+      tags: ['american', 'spirit'],
+      featured: false,
+      inStock: true,
+      sku: 'HOO-006'
+    },
+    {
+      id: 'hoodie-7',
+      name: 'Patriot Pride Hoodie',
+      description: 'Wear your patriotic pride. Fleece-lined for maximum warmth and comfort.',
+      price: 54.99,
+      images: ['/truth-logo-7.png'],
+      category: 'hoodie' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Gray'],
+      tags: ['patriot', 'pride'],
+      featured: false,
+      inStock: true,
+      sku: 'HOO-007'
+    },
+    {
+      id: 'hoodie-8',
+      name: 'Liberty Eagle Hoodie',
+      description: 'Soar with liberty. Bold eagle design on premium heavyweight hoodie.',
+      price: 54.99,
+      images: ['/truth-logo-8.png'],
+      category: 'hoodie' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Charcoal'],
+      tags: ['liberty', 'eagle'],
+      featured: true,
+      inStock: true,
+      sku: 'HOO-008'
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-background">

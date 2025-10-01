@@ -5,10 +5,131 @@ import { Filter, Grid, List, SortAsc, Shirt } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ProductCard } from "@/components/ProductCard";
-import { getProductsByCategory } from "@/data/products";
 
 const Tshirts: FC = () => {
-  const tshirtProducts = getProductsByCategory('tshirt');
+  // Mock t-shirt products - 8 products (2 rows x 4)
+  const tshirtProducts = [
+    {
+      id: 'tshirt-1',
+      name: 'Truth Matters Classic Tee',
+      description: 'Stand for truth with our classic Truth Matters t-shirt. Premium 100% cotton.',
+      price: 29.99,
+      images: ['/truth-logo-1.png'],
+      category: 'tshirt' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Navy'],
+      tags: ['truth', 'patriotic'],
+      featured: true,
+      inStock: true,
+      sku: 'TSH-001'
+    },
+    {
+      id: 'tshirt-2',
+      name: 'Patriot Shield Tee',
+      description: 'Defend freedom with honor. Our Patriot Shield design for true patriots.',
+      price: 29.99,
+      images: ['/truth-logo-2.png'],
+      category: 'tshirt' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Gray'],
+      tags: ['patriot', 'shield'],
+      featured: true,
+      inStock: true,
+      sku: 'TSH-002'
+    },
+    {
+      id: 'tshirt-3',
+      name: 'Liberty Guard Tee',
+      description: 'Standing watch over constitutional rights. A powerful symbol of freedom.',
+      price: 29.99,
+      images: ['/truth-logo-3.png'],
+      category: 'tshirt' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Red'],
+      tags: ['liberty', 'constitution'],
+      featured: false,
+      inStock: true,
+      sku: 'TSH-003'
+    },
+    {
+      id: 'tshirt-4',
+      name: 'Honor Badge Tee',
+      description: 'Representing duty, honor, and service to country. For those who serve with pride.',
+      price: 29.99,
+      images: ['/truth-logo-4.png'],
+      category: 'tshirt' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Blue'],
+      tags: ['honor', 'duty'],
+      featured: false,
+      inStock: true,
+      sku: 'TSH-004'
+    },
+    {
+      id: 'tshirt-5',
+      name: 'Freedom Eagle Tee',
+      description: 'Soar high with American pride. Bold eagle design on premium cotton.',
+      price: 29.99,
+      images: ['/truth-logo-5.png'],
+      category: 'tshirt' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Charcoal'],
+      tags: ['eagle', 'freedom'],
+      featured: true,
+      inStock: true,
+      sku: 'TSH-005'
+    },
+    {
+      id: 'tshirt-6',
+      name: 'Justice Seal Tee',
+      description: 'Upholding justice and truth. A statement piece for those who fight for what\'s right.',
+      price: 29.99,
+      images: ['/truth-logo-6.png'],
+      category: 'tshirt' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Navy'],
+      tags: ['justice', 'truth'],
+      featured: false,
+      inStock: true,
+      sku: 'TSH-006'
+    },
+    {
+      id: 'tshirt-7',
+      name: 'Warrior Crest Tee',
+      description: 'For those who fight for what\'s right. Bold crest design for modern warriors.',
+      price: 29.99,
+      images: ['/truth-logo-7.png'],
+      category: 'tshirt' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Gray'],
+      tags: ['warrior', 'crest'],
+      featured: false,
+      inStock: true,
+      sku: 'TSH-007'
+    },
+    {
+      id: 'tshirt-8',
+      name: 'Victory Banner Tee',
+      description: 'Celebrating the triumph of truth over deception. Premium quality tee.',
+      price: 29.99,
+      images: ['/truth-logo-8.png'],
+      category: 'tshirt' as const,
+      gender: 'unisex' as const,
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+      colors: ['Black', 'White', 'Red'],
+      tags: ['victory', 'banner'],
+      featured: true,
+      inStock: true,
+      sku: 'TSH-008'
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-background">

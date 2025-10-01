@@ -5,10 +5,131 @@ import { Filter, Grid, List, SortAsc } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ProductCard } from "@/components/ProductCard";
-import { getProductsByCategory } from "@/data/products";
 
 const Patches: FC = () => {
-  const patchProducts = getProductsByCategory('patch');
+  // Mock patch products - 8 products (2 rows x 4)
+  const patchProducts = [
+    {
+      id: 'patch-1',
+      name: 'Heritage Cross Patch',
+      description: 'Honoring our heritage and those who served. Premium embroidered with velcro.',
+      price: 12.99,
+      images: ['/truth-logo-11.png'],
+      category: 'patch' as const,
+      gender: 'unisex' as const,
+      sizes: ['3.5" x 3.5"'],
+      colors: ['Full Color'],
+      tags: ['heritage', 'cross'],
+      featured: true,
+      inStock: true,
+      sku: 'PAT-001'
+    },
+    {
+      id: 'patch-2',
+      name: 'Truth Matters Shield Patch',
+      description: 'Stand for truth. Embroidered shield design with hook & loop backing.',
+      price: 12.99,
+      images: ['/truth-logo-1.png'],
+      category: 'patch' as const,
+      gender: 'unisex' as const,
+      sizes: ['3" x 3"'],
+      colors: ['Full Color'],
+      tags: ['truth', 'shield'],
+      featured: true,
+      inStock: true,
+      sku: 'PAT-002'
+    },
+    {
+      id: 'patch-3',
+      name: 'Patriot Eagle Patch',
+      description: 'Bold eagle embroidered patch. Perfect for tactical gear and backpacks.',
+      price: 12.99,
+      images: ['/truth-logo-2.png'],
+      category: 'patch' as const,
+      gender: 'unisex' as const,
+      sizes: ['4" x 3"'],
+      colors: ['Full Color'],
+      tags: ['patriot', 'eagle'],
+      featured: false,
+      inStock: true,
+      sku: 'PAT-003'
+    },
+    {
+      id: 'patch-4',
+      name: 'Liberty Star Patch',
+      description: 'Freedom and liberty emblem. Velcro backing for easy attachment.',
+      price: 12.99,
+      images: ['/truth-logo-3.png'],
+      category: 'patch' as const,
+      gender: 'unisex' as const,
+      sizes: ['3" Round'],
+      colors: ['Full Color'],
+      tags: ['liberty', 'star'],
+      featured: false,
+      inStock: true,
+      sku: 'PAT-004'
+    },
+    {
+      id: 'patch-5',
+      name: 'Honor Badge Patch',
+      description: 'Represent honor and duty. Premium quality embroidered patch.',
+      price: 12.99,
+      images: ['/truth-logo-4.png'],
+      category: 'patch' as const,
+      gender: 'unisex' as const,
+      sizes: ['3.5" x 2.5"'],
+      colors: ['Full Color'],
+      tags: ['honor', 'badge'],
+      featured: true,
+      inStock: true,
+      sku: 'PAT-005'
+    },
+    {
+      id: 'patch-6',
+      name: 'Warrior Crest Patch',
+      description: 'For modern warriors. Durable embroidered design with velcro.',
+      price: 12.99,
+      images: ['/truth-logo-5.png'],
+      category: 'patch' as const,
+      gender: 'unisex' as const,
+      sizes: ['4" x 3"'],
+      colors: ['Full Color'],
+      tags: ['warrior', 'crest'],
+      featured: false,
+      inStock: true,
+      sku: 'PAT-006'
+    },
+    {
+      id: 'patch-7',
+      name: 'Defender Mark Patch',
+      description: 'Defending our values. Weather-resistant embroidered patch.',
+      price: 12.99,
+      images: ['/truth-logo-6.png'],
+      category: 'patch' as const,
+      gender: 'unisex' as const,
+      sizes: ['3" x 3"'],
+      colors: ['Full Color'],
+      tags: ['defender', 'mark'],
+      featured: false,
+      inStock: true,
+      sku: 'PAT-007'
+    },
+    {
+      id: 'patch-8',
+      name: 'Unity Banner Patch',
+      description: 'United we stand. Premium patch with hook backing for uniforms and gear.',
+      price: 12.99,
+      images: ['/truth-logo-7.png'],
+      category: 'patch' as const,
+      gender: 'unisex' as const,
+      sizes: ['4" x 2"'],
+      colors: ['Full Color'],
+      tags: ['unity', 'banner'],
+      featured: true,
+      inStock: true,
+      sku: 'PAT-008'
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-background">

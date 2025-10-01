@@ -5,10 +5,131 @@ import { Filter, Grid, List, SortAsc } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ProductCard } from "@/components/ProductCard";
-import { getProductsByCategory } from "@/data/products";
 
 const Hats: FC = () => {
-  const hatProducts = getProductsByCategory('hat');
+  // Mock hat products - 8 products (2 rows x 4)
+  const hatProducts = [
+    {
+      id: 'hat-1',
+      name: 'Defender Mark Cap',
+      description: 'Defending our nation and its sacred principles. Classic adjustable cap.',
+      price: 24.99,
+      images: ['/truth-logo-9.png'],
+      category: 'hat' as const,
+      gender: 'unisex' as const,
+      sizes: ['One Size'],
+      colors: ['Black', 'White', 'Navy'],
+      tags: ['defender', 'cap'],
+      featured: true,
+      inStock: true,
+      sku: 'HAT-001'
+    },
+    {
+      id: 'hat-2',
+      name: 'Unity Star Trucker Hat',
+      description: 'United we stand, divided we fall. Classic trucker hat with mesh back.',
+      price: 26.99,
+      images: ['/truth-logo-10.png'],
+      category: 'hat' as const,
+      gender: 'unisex' as const,
+      sizes: ['One Size'],
+      colors: ['Black', 'White', 'Red'],
+      tags: ['unity', 'star', 'trucker'],
+      featured: true,
+      inStock: true,
+      sku: 'HAT-002'
+    },
+    {
+      id: 'hat-3',
+      name: 'Truth Matters Classic Cap',
+      description: 'Show your support for truth. Embroidered logo on premium cap.',
+      price: 24.99,
+      images: ['/truth-logo-11.png'],
+      category: 'hat' as const,
+      gender: 'unisex' as const,
+      sizes: ['One Size'],
+      colors: ['Black', 'White', 'Charcoal'],
+      tags: ['truth', 'classic'],
+      featured: false,
+      inStock: true,
+      sku: 'HAT-003'
+    },
+    {
+      id: 'hat-4',
+      name: 'Freedom Eagle Cap',
+      description: 'Bold eagle design. Adjustable snapback for perfect fit.',
+      price: 24.99,
+      images: ['/truth-logo-1.png'],
+      category: 'hat' as const,
+      gender: 'unisex' as const,
+      sizes: ['One Size'],
+      colors: ['Black', 'White', 'Blue'],
+      tags: ['freedom', 'eagle'],
+      featured: false,
+      inStock: true,
+      sku: 'HAT-004'
+    },
+    {
+      id: 'hat-5',
+      name: 'Patriot Shield Hat',
+      description: 'Defend your values. Premium embroidered shield design.',
+      price: 26.99,
+      images: ['/truth-logo-2.png'],
+      category: 'hat' as const,
+      gender: 'unisex' as const,
+      sizes: ['One Size'],
+      colors: ['Black', 'White', 'Gray'],
+      tags: ['patriot', 'shield'],
+      featured: true,
+      inStock: true,
+      sku: 'HAT-005'
+    },
+    {
+      id: 'hat-6',
+      name: 'Liberty Trucker Hat',
+      description: 'Breathable mesh back for comfort. Classic liberty design.',
+      price: 26.99,
+      images: ['/truth-logo-3.png'],
+      category: 'hat' as const,
+      gender: 'unisex' as const,
+      sizes: ['One Size'],
+      colors: ['Black', 'White', 'Navy'],
+      tags: ['liberty', 'trucker'],
+      featured: false,
+      inStock: true,
+      sku: 'HAT-006'
+    },
+    {
+      id: 'hat-7',
+      name: 'Honor Badge Cap',
+      description: 'For those who serve with honor. Durable construction.',
+      price: 24.99,
+      images: ['/truth-logo-4.png'],
+      category: 'hat' as const,
+      gender: 'unisex' as const,
+      sizes: ['One Size'],
+      colors: ['Black', 'White', 'Red'],
+      tags: ['honor', 'badge'],
+      featured: false,
+      inStock: true,
+      sku: 'HAT-007'
+    },
+    {
+      id: 'hat-8',
+      name: 'Victory Crest Hat',
+      description: 'Celebrate victory. Premium cap with embroidered crest.',
+      price: 24.99,
+      images: ['/truth-logo-5.png'],
+      category: 'hat' as const,
+      gender: 'unisex' as const,
+      sizes: ['One Size'],
+      colors: ['Black', 'White', 'Charcoal'],
+      tags: ['victory', 'crest'],
+      featured: true,
+      inStock: true,
+      sku: 'HAT-008'
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-background">
