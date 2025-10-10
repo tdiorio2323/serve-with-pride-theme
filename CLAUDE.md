@@ -8,7 +8,12 @@ This is a React-based e-commerce website built with Vite, TypeScript, React Rout
 
 ## Development Commands
 
+**Package Manager**: This project uses `npm` (package.json present; pnpm-lock.yaml is gitignored).
+
 ```bash
+# Install dependencies
+npm install
+
 # Start development server (runs on port 8080)
 npm run dev
 
@@ -42,12 +47,18 @@ npm run preview
 
 ### Routing Structure
 
-Routes are defined in `src/App.tsx` using React Router. Key routing patterns:
+Routes are defined in `src/App.tsx` using React Router v6 with v7 future flags enabled. Key routing patterns:
 
 - Static routes for pages like `/about`, `/contact`, `/faq`
 - Category routes like `/t-shirts`, `/hoodies`, `/hats`
 - Dynamic product route: `/product/:id` handled by `ProductPage.tsx`
 - Catch-all `*` route for 404 - **IMPORTANT**: Add all custom routes ABOVE the catch-all route
+
+Provider hierarchy (from outer to inner):
+1. QueryClientProvider (TanStack Query)
+2. TooltipProvider (Radix UI)
+3. CartProvider (Custom cart state)
+4. BrowserRouter (React Router with future flags: v7_relativeSplatPath, v7_startTransition)
 
 ### Product Data
 
@@ -68,7 +79,11 @@ Shopping cart managed via `src/contexts/CartContext.tsx`:
 - Cart items track: product details, quantity, size, color
 - Hook: `useCart()` provides access to cart state and methods
 
-**Note**: There are two Product interfaces (one in `products.ts`, one in `CartContext.tsx`) - they differ slightly. CartItem extends the CartContext Product interface.
+**CRITICAL TYPE MISMATCH**: There are two Product interfaces with incompatible ID types:
+- `src/data/products.ts`: Product.id is `string` (e.g., 'tshirt-truth-matters-1')
+- `src/contexts/CartContext.tsx`: Product.id is `number`
+
+When working with cart functionality, you'll need to bridge these types. The CartItem interface extends the CartContext Product (with numeric ID). When adding products to cart, ensure proper type handling or consider unifying the Product interface definitions.
 
 ### Path Aliasing
 
@@ -87,21 +102,39 @@ import { products } from "@/data/products"
 - `src/hooks/` - Custom React hooks
 - `src/lib/` - Utility functions (utils.ts with `cn()` for class merging)
 
-### Styling
+### Styling & Design System
 
-- Tailwind CSS with custom config in `tailwind.config.ts`
-- Typography plugin enabled for rich text
+**Tailwind Configuration** (`tailwind.config.ts`):
+- **Custom brand colors**: Access via `brand-red`, `brand-dark`, `brand-navy`, `brand-gray`
+- **Custom fonts**: 'Bebas Neue' for display text, 'Inter' for body/sans
+- Typography plugin enabled for rich text (`@tailwindcss/typography`)
 - Custom animations via tailwindcss-animate
-- Dark mode support via next-themes
-- Utility function `cn()` from `src/lib/utils.ts` for conditional class merging
+- Dark mode support via next-themes (class-based)
+
+**Design System** (`src/index.css`):
+- All colors defined as HSL CSS variables in `:root`
+- Custom gradients: `--gradient-hero`, `--gradient-red`, `--gradient-premium`
+- Enhanced shadows: `--shadow-card`, `--shadow-button`, `--shadow-elegant`
+- Glass effect variables: `--glass-bg`, `--glass-border`
+- Brand colors: Truth Red (352 76% 50%), Service Blue (209 42% 16%)
+
+**Utilities**:
+- `cn()` from `src/lib/utils.ts` for conditional class merging
+- Custom `.hero-flag-background` utility class with overlay effect
 
 ## Development Notes
 
-- Development server runs on `http://[::]:8080` (IPv6 localhost)
+- Development server runs on `http://[::]:8080` (IPv6 localhost, port 8080)
 - Component tagging is enabled in development mode via lovable-tagger
-- TypeScript strict mode is partially disabled (see tsconfig.json)
+- **TypeScript Configuration**: Strict mode partially disabled with:
+  - `noImplicitAny: false`
+  - `noUnusedParameters: false`
+  - `noUnusedLocals: false`
+  - `strictNullChecks: false`
+  - `allowJs: true`
 - ESLint configured with React-specific rules
 - Some Next.js artifacts present (.next directory, next-env.d.ts) but project uses Vite
+- React Router configured with v7 future flags for forward compatibility
 
 ## Project Origin
 
