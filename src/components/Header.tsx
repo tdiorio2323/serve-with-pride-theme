@@ -103,7 +103,7 @@ const Header = () => {
                   alt="Truth Matters Logo"
                   loading="lazy"
                   decoding="async"
-                  fetchPriority="low"
+                  fetchpriority="low"
                   width={120}
                   height={80}
                   className="h-20 w-auto object-contain"
@@ -141,7 +141,7 @@ const Header = () => {
                     alt="Truth Matters Logo"
                     loading="lazy"
                     decoding="async"
-                    fetchPriority="low"
+                    fetchpriority="low"
                     width={72}
                     height={48}
                     className="h-12 w-auto object-contain"

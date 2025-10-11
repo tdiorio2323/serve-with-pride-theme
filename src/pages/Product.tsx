@@ -27,7 +27,7 @@ export default function ProductPage() {
             alt={data.title}
             loading="lazy"
             decoding="async"
-            fetchPriority="low"
+            fetchpriority="low"
             className="w-full object-cover"
             width={960}
             height={960}

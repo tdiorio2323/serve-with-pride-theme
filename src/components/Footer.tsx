@@ -37,7 +37,7 @@ const Footer = () => {
                 alt="Truth Matters Logo" 
                 loading="lazy"
                 decoding="async"
-                fetchPriority="low"
+                fetchpriority="low"
                 width={48}
                 height={48}
                 className="h-12 w-12 object-contain"

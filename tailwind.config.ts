@@ -68,7 +68,7 @@ export default {
         brand: {
           red: "#c1121f",
           dark: "#22223b",
-          navy: "#003049",
+          navy: "#000000",
           gray: "#6b7280",
         },
         sidebar: {

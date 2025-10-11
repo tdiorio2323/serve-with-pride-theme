@@ -22,7 +22,7 @@ export default function ProductCard({ product, isLoading = false }) {
     <Link className="block group" to={href}>
       <div className="aspect-square overflow-hidden bg-neutral-100">
         <img
-          src={product?.image ?? "/placeholder.svg"}
+          src={product?.images[0] ?? "/placeholder.svg"}
           alt={product?.name ?? "Product"}
           loading="lazy"
           className="h-full w-full object-cover transition-transform group-hover:scale-105"

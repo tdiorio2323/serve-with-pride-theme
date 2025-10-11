@@ -77,7 +77,7 @@ export const ShoppingCart = () => {
                     alt={item.name}
                     loading="lazy"
                     decoding="async"
-                    fetchPriority="low"
+                    fetchpriority="low"
                     width={64}
                     height={64}
                     className="h-16 w-16 rounded-md object-cover"

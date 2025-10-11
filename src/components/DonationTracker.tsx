@@ -6,7 +6,7 @@ const DonationTracker = () => {
   const progressPercentage = (currentAmount / goalAmount) * 100;
 
   return (
-    <section className="py-16 bg-background">
+  <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-wide">
@@ -30,7 +30,7 @@ const DonationTracker = () => {
               />
             </div>
             
-            <div className="bg-brand-navy text-white p-6 rounded-lg">
+            <div className="bg-black text-white p-6 rounded-lg">
               <div className="font-display text-2xl font-bold mb-2 tracking-wide">
                 FIRST RESPONDER FUND
               </div>

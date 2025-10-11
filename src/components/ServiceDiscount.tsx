@@ -11,13 +11,13 @@ const ServiceDiscount = () => {
   ];
 
   return (
-    <section className="py-20 bg-brand-navy text-white relative overflow-hidden">
+  <section className="py-20 bg-black text-white relative overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
         style={{ backgroundImage: `url(${serviceBg})` }}
       ></div>
-      <div className="absolute inset-0 bg-brand-navy/80"></div>
+  <div className="absolute inset-0 bg-black/80"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
