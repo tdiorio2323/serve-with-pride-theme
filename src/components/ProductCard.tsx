@@ -20,7 +20,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
 
   const img = product.images?.[0] || '/TRUTH-red-white-blue.jpg';
-  const resolved = img.startsWith('/') ? img.substring(1) : img;
+  const resolved = img.startsWith('/') ? img : `/${img}`;
 
   const handleAddToCart = () => {
     // Convert to the CartContext Product format
@@ -210,7 +210,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                         <SelectItem key={color} value={color}>
                           {color}
                         </SelectItem>
-                      ))}'''
+                      ))}
                     </SelectContent>
                   </Select>
                 </div>
