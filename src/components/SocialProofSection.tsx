@@ -44,8 +44,3 @@ const SocialProofSection: React.FC = () => {
 };
 
 export default SocialProofSection;
-
-  );
-};
-
-export default SocialProofSection;
