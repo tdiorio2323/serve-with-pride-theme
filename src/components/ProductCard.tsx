@@ -19,13 +19,16 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const [selectedColor, setSelectedColor] = useState<string>(product.colors[0] || 'Black');
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
 
+  const img = product.images?.[0] || '/TRUTH-red-white-blue.jpg';
+  const resolved = img.startsWith('/') ? img.substring(1) : img;
+
   const handleAddToCart = () => {
     // Convert to the CartContext Product format
     const cartItem = {
       id: parseInt(product.id.replace(/\D/g, '')) || Math.random() * 1000, // Convert string to number
       name: product.name,
       price: `$${product.price.toFixed(2)}`, // Convert number to string format
-      image: product.images[0], // Use first image
+      image: resolved, // Use first image
       description: product.description,
       category: product.category,
       quantity: 1,
@@ -53,7 +56,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <div className="relative">
             <Link to={`/product/${product.id}`}>
               <img
-                src={product.images[0] || '/placeholder-image.jpg'}
+                src={resolved}
                 alt={product.name}
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110 cursor-pointer"
               />
@@ -163,7 +166,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <img
-                src={product.images[0] || '/placeholder-image.jpg'}
+                src={resolved}
                 alt={product.name}
                 className="w-full h-80 object-cover rounded-lg"
               />
@@ -207,7 +210,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                         <SelectItem key={color} value={color}>
                           {color}
                         </SelectItem>
-                      ))}
+                      ))}'''
                     </SelectContent>
                   </Select>
                 </div>
