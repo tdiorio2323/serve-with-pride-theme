@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Filter, Grid, List, SortAsc, Shirt } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ProductCard } from "@/components/ProductCard";
+import ProductCard from "@/components/ProductCard";
 
 const Tshirts: FC = () => {
   // Mock t-shirt products - 8 products (2 rows x 4)
