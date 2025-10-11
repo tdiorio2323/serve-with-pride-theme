@@ -81,6 +81,9 @@ export const calculateSubtotal = (items: CartItem[]): number => {
   return items.reduce((total, item) => total + item.price * item.qty, 0);
 };
 
+export const calculateDonationAmount = (itemCount: number): number => {
+  return itemCount * 1; // $1 per item
+};
 
 interface CartContextType {
   state: CartState;
@@ -93,6 +96,7 @@ interface CartContextType {
   closeCart: () => void;
   itemCount: number;
   subtotal: number;
+  donationAmount: number;
 }
 
 
@@ -134,6 +138,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const closeCart = () => dispatch({ type: 'CLOSE_CART' });
   const itemCount = state.items.reduce((total, item) => total + item.qty, 0);
   const subtotal = calculateSubtotal(state.items);
+  const donationAmount = calculateDonationAmount(itemCount);
 
   return (
     <CartContext.Provider value={{
@@ -146,7 +151,8 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       openCart,
       closeCart,
       itemCount,
-      subtotal
+      subtotal,
+      donationAmount
     }}>
       {children}
     </CartContext.Provider>

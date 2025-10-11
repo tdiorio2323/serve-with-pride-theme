@@ -25,9 +25,8 @@ export default function ProductPage() {
           <img
             src={data.image}
             alt={data.title}
-            loading="lazy"
+            loading="eager"
             decoding="async"
-            fetchpriority="low"
             className="w-full object-cover"
             width={960}
             height={960}

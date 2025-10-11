@@ -1,30 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { Link } from "react-router-dom";
+import { socialLinks, footerLinks } from "@/data/footerLinks";
 
 const Footer = () => {
-  const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Twitter, href: "#", label: "Twitter" }
-  ];
-
-  const footerLinks = {
-    "SHOP": [
-      { name: "All Products", path: "/all-products" },
-      { name: "Our Story", path: "/our-mission" },
-      { name: "Shipping Info", path: "/shipping-info" },
-      { name: "Returns", path: "/returns" }
-    ],
-    "COMPANY": [
-      { name: "Our Story", path: "/our-mission" },
-      { name: "Shipping Info", path: "/shipping-info" },
-      { name: "Terms of Service", path: "/terms-of-service" },
-      { name: "Privacy Policy", path: "/privacy-policy" }
-    ]
-  };
-
   return (
     <footer className="bg-gray-950 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -35,9 +14,8 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="Truth Matters Logo" 
-                loading="lazy"
+                loading="eager"
                 decoding="async"
-                fetchpriority="low"
                 width={48}
                 height={48}
                 className="h-12 w-12 object-contain"
@@ -48,7 +26,7 @@ const Footer = () => {
             </div>
             
             <p className="font-body text-white/80 leading-relaxed mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Your mission statement or a brief description of your brand goes here.
             </p>
 
             <div className="flex space-x-4">
@@ -127,6 +105,7 @@ const Footer = () => {
       </div>
     </footer>
   );
+};
 };
 
 export default Footer;

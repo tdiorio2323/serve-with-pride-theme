@@ -6,33 +6,20 @@
 All colors MUST be HSL.
 */
 
-@layer base {
-  :root {
-    /* Truth Matters Brand Colors */
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-    background-image: url('/src/assets/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-  }
+/* Site-wide base styles */
+@layer base {}
 
-  .hero-flag-background::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    pointer-events: none;
-    z-index: 1;
-  }
+/* Utility class for dark overlay over a background image */
+.hero-flag-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 1;
+}
 
-  .hero-flag-background > * {
-    position: relative;
-    z-index: 2;
-  }
+.hero-flag-background > * {
+  position: relative;
+  z-index: 2;
 }

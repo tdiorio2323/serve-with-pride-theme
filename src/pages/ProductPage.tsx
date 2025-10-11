@@ -9,6 +9,7 @@ import { useCart } from "@/contexts/CartContext";
 import { getProductById, Product } from "@/data/products";
 import { ShoppingCart, Heart, Share2, Truck, Shield, RotateCcw, ArrowLeft } from "lucide-react";
 import { toast } from "sonner";
+import { useShare } from "@/hooks/use-share";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ const ProductPage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { addItem, openCart } = useCart();
+  const { shareContent } = useShare();
 
   const [product, setProduct] = useState<Product | null>(null);
   const [selectedSize, setSelectedSize] = useState<string>('M');
@@ -62,7 +64,7 @@ const ProductPage = () => {
 
   const handleAddToCart = () => {
     const cartItem = {
-      id: parseInt(product.id.replace(/\D/g, '')) || Math.random() * 1000,
+      id: product.id,
       name: product.name,
       price: `$${product.price.toFixed(2)}`,
       image: product.images[selectedImageIndex] || product.images[0],
@@ -283,7 +285,11 @@ const ProductPage = () => {
 
                 <Button
                   variant="outline"
-                  onClick={handleShare}
+                  onClick={() => shareContent({
+                    title: product.name,
+                    text: product.description,
+                    url: window.location.href,
+                  })}
                   className="flex-1"
                 >
                   <Share2 className="w-4 h-4 mr-2" />
