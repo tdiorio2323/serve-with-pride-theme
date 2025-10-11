@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Filter, Grid, List, SortAsc, Heart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ProductCard } from "@/components/ProductCard";
+import ProductCard from "@/components/ProductCard";
 import { getProductsByGender } from "@/data/products";
 
 const Womens: FC = () => {
