@@ -17,8 +17,9 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="relative flex items-center justify-center h-32">
             <DesktopNav />
-
+            <Logo className="h-20" />
             <MobileNav isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
+          </div>
         </div>
       </header>
       <ShoppingCart />

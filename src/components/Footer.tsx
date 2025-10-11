@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
 import { Link } from "react-router-dom";
 import { socialLinks, footerLinks } from "@/data/footerLinks";
+import Logo from "@/components/Logo";
 
 const Footer = () => {
   return (
@@ -11,22 +11,12 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src={logo} 
-                alt="Truth Matters Logo" 
-                loading="eager"
-                decoding="async"
-                width={48}
-                height={48}
-                className="h-12 w-12 object-contain"
-              />
-              <div className="font-display text-3xl font-bold tracking-wide text-white">
-                TRUTH MATTERS
-              </div>
+              <Logo className="h-12 w-12" />
+
             </div>
             
             <p className="font-body text-white/80 leading-relaxed mb-6">
-              Your mission statement or a brief description of your brand goes here.
+              We serve those who serve us. Every purchase supports veterans, law enforcement, firefighters & EMS.
             </p>
 
             <div className="flex space-x-4">

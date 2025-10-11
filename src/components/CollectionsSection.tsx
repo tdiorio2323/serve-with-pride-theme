@@ -50,12 +50,7 @@ const CollectionsSection: React.FC = () => {
           ))}
         </div>
       </div>
-    </section>
-  );
-};
-
-export default CollectionsSection;
-  );
+    </section>  );
 };
 
 export default CollectionsSection;

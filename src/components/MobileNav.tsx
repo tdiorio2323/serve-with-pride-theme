@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Search, ChevronDown } from "lucide-react";
 import { ShoppingCartTrigger } from "@/components/ShoppingCart";
-import { Img } from "@/components/Img";
+import Logo from "./Logo";
 import { leftNavItems, rightNavItems } from "@/data/navigation";
 
 interface MobileNavProps {
@@ -30,14 +30,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isMobileMenuOpen, setIsMobileMenu
           {/* Mobile Menu Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-700">
             <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
-              <Img
-                src="/truth-logo.png"
-                alt="Truth Matters Logo"
-                decoding="async"
-                width={72}
-                height={48}
-                className="h-12 w-auto object-contain"
-              />
+              <Logo className="h-12 w-auto object-contain" />
             </Link>
             <button
               className="p-2 text-white hover:text-primary transition-colors"

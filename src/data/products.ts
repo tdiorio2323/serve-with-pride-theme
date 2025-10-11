@@ -18,7 +18,7 @@ export interface Product {
 export const products: Product[] = [
   // T-Shirts
   {
-    id: 'tshirt-truth-matters-1',
+    id: 'tshirt-truth-matters-1-unisex',
     name: 'Truth Matters Classic Tee',
     description: 'Stand for truth with our classic Truth Matters t-shirt. Made from premium 100% cotton, this comfortable tee proudly displays our core values.',
     price: 29.99,
@@ -30,10 +30,10 @@ export const products: Product[] = [
     tags: ['truth', 'patriotic', 'conservative', 'freedom'],
     featured: true,
     inStock: true,
-    sku: 'TM-TSH-001'
+    sku: 'TM-TSH-001-UNISEX'
   },
   {
-    id: 'tshirt-patriot-shield',
+    id: 'tshirt-patriot-shield-unisex',
     name: 'Patriot Shield Tee',
     description: 'Defend freedom with honor. Our Patriot Shield design represents the courage of those who stand guard over our liberties.',
     price: 29.99,
@@ -45,7 +45,7 @@ export const products: Product[] = [
     tags: ['patriot', 'shield', 'freedom', 'honor'],
     featured: true,
     inStock: true,
-    sku: 'TM-TSH-002'
+    sku: 'TM-TSH-002-UNISEX'
   },
   {
     id: 'tshirt-liberty-guard',
@@ -80,7 +80,7 @@ export const products: Product[] = [
 
   // Women's T-Shirts (fitted versions)
   {
-    id: 'tshirt-women-freedom-eagle',
+    id: 'tshirt-women-freedom-eagle-womens',
     name: 'Freedom Eagle Women\'s Tee',
     description: 'Soar high with American pride. This fitted women\'s tee features our majestic Freedom Eagle design in soft, premium cotton.',
     price: 32.99,
@@ -92,7 +92,7 @@ export const products: Product[] = [
     tags: ['eagle', 'freedom', 'women', 'patriotic'],
     featured: true,
     inStock: true,
-    sku: 'TM-WTS-005'
+    sku: 'TM-WTS-005-WOMENS'
   },
   {
     id: 'tshirt-women-justice-seal',
@@ -112,7 +112,7 @@ export const products: Product[] = [
 
   // Hoodies
   {
-    id: 'hoodie-warrior-crest',
+    id: 'hoodie-warrior-crest-unisex',
     name: 'Warrior Crest Hoodie',
     description: 'For those who fight for what\'s right. Premium heavyweight hoodie with our bold Warrior Crest design.',
     price: 54.99,
@@ -124,7 +124,7 @@ export const products: Product[] = [
     tags: ['warrior', 'hoodie', 'strength', 'crest'],
     featured: true,
     inStock: true,
-    sku: 'TM-HOO-007'
+    sku: 'TM-HOO-007-UNISEX'
   },
   {
     id: 'hoodie-victory-banner',
@@ -204,7 +204,7 @@ export const products: Product[] = [
 
   // Hats
   {
-    id: 'hat-defender-mark',
+    id: 'hat-defender-mark-unisex',
     name: 'Defender Mark Cap',
     description: 'Defending our nation and its sacred principles. Classic adjustable cap with embroidered Defender Mark logo.',
     price: 24.99,
@@ -216,7 +216,7 @@ export const products: Product[] = [
     tags: ['defender', 'cap', 'hat', 'nation'],
     featured: true,
     inStock: true,
-    sku: 'TM-HAT-009'
+    sku: 'TM-HAT-009-UNISEX'
   },
   {
     id: 'hat-unity-star',
