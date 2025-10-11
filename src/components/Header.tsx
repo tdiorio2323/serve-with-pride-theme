@@ -99,7 +99,7 @@ const Header = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <Link to="/">
                 <img
-                  src="/lovable-uploads/90530307-3214-4d21-8704-4884a059a14b.png"
+                  src="/truth-logo.png"
                   alt="Truth Matters Logo"
                   className="h-20 w-auto object-contain"
                 />
@@ -132,7 +132,7 @@ const Header = () => {
               <div className="flex items-center justify-between p-4 border-b border-gray-700">
                 <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
                   <img
-                    src="/lovable-uploads/90530307-3214-4d21-8704-4884a059a14b.png"
+                    src="/truth-logo.png"
                     alt="Truth Matters Logo"
                     className="h-12 w-auto object-contain"
                   />
