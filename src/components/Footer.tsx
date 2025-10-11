@@ -46,6 +46,11 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="Truth Matters Logo" 
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
+                width={48}
+                height={48}
                 className="h-12 w-12 object-contain"
               />
               <div className="font-display text-2xl font-bold tracking-wide">

@@ -36,6 +36,10 @@ const Womens = lazy(() => import("./pages/Womens"));
 const NewPage = lazy(() => import("./pages/NewPage"));
 const TestPage = lazy(() => import("./pages/TestPage"));
 const Mockups = lazy(() => import("./pages/Mockups"));
+
+const Cart = lazy(() => import("./pages/Cart"));
+const Checkout = lazy(() => import("./pages/Checkout"));
+const OrderSuccess = lazy(() => import("./pages/OrderSuccess"));
 const ProductPage = lazy(() => import("./pages/ProductPage"));
 
 const queryClient = new QueryClient();
@@ -78,6 +82,9 @@ const App = () => (
             <Route path="/test-page" element={<TestPage />} />
             <Route path="/mockups" element={<Mockups />} />
             <Route path="/product/:id" element={<ProductPage />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/order/success" element={<OrderSuccess />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

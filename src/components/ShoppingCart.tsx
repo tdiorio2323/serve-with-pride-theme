@@ -75,6 +75,11 @@ export const ShoppingCart = () => {
                   <img
                     src={item.image}
                     alt={item.name}
+                    loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
+                    width={64}
+                    height={64}
                     className="h-16 w-16 rounded-md object-cover"
                   />
                   <div className="flex-1 min-w-0">

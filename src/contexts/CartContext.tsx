@@ -1,224 +1,161 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
-export interface Product {
+
+export interface CartItem {
   id: string;
+  slug?: string;
   name: string;
-  price: string;
+  price: number;
   image: string;
-  description: string;
-  category?: string;
-  size?: string;
-  color?: string;
+  variant?: {
+    size?: string;
+    color?: string;
+  };
+  qty: number;
+  inStock?: boolean;
 }
 
-export interface CartItem extends Product {
-  quantity: number;
-  size: string;
-  color: string;
-}
 
 interface CartState {
   items: CartItem[];
   isOpen: boolean;
-  total: number;
 }
+
 
 type CartAction =
   | { type: 'ADD_ITEM'; payload: CartItem }
+  | { type: 'UPDATE_QTY'; payload: { id: string; qty: number } }
   | { type: 'REMOVE_ITEM'; payload: string }
-  | { type: 'UPDATE_QUANTITY'; payload: { id: string; quantity: number } }
   | { type: 'CLEAR_CART' }
   | { type: 'TOGGLE_CART' }
   | { type: 'OPEN_CART' }
   | { type: 'CLOSE_CART' };
 
+
 const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case 'ADD_ITEM': {
-      const existingItem = state.items.find(
-        item => item.id === action.payload.id &&
-                item.size === action.payload.size &&
-                item.color === action.payload.color
+      // Only allow qty 1-10, check stock
+      const item = action.payload;
+      if (item.inStock === false) return state;
+      if (item.qty < 1 || item.qty > 10) return state;
+      const existing = state.items.find(
+        i => i.id === item.id && i.variant?.size === item.variant?.size && i.variant?.color === item.variant?.color
       );
-
-      if (existingItem) {
-        const updatedItems = state.items.map(item =>
-          item.id === action.payload.id &&
-          item.size === action.payload.size &&
-          item.color === action.payload.color
-            ? { ...item, quantity: item.quantity + action.payload.quantity }
-            : item
+      if (existing) {
+        const updated = state.items.map(i =>
+          i.id === item.id && i.variant?.size === item.variant?.size && i.variant?.color === item.variant?.color
+            ? { ...i, qty: Math.min(i.qty + item.qty, 10) }
+            : i
         );
-        return {
-          ...state,
-          items: updatedItems,
-          total: calculateTotal(updatedItems)
-        };
+        return { ...state, items: updated };
       }
-
-      const newItems = [...state.items, action.payload];
-      return {
-        ...state,
-        items: newItems,
-        total: calculateTotal(newItems)
-      };
+      return { ...state, items: [...state.items, item] };
     }
-
-    case 'REMOVE_ITEM': {
-      const newItems = state.items.filter(item => item.id !== action.payload);
-      return {
-        ...state,
-        items: newItems,
-        total: calculateTotal(newItems)
-      };
-    }
-
-    case 'UPDATE_QUANTITY': {
-      const newItems = state.items.map(item =>
-        item.id === action.payload.id
-          ? { ...item, quantity: action.payload.quantity }
-          : item
+    case 'UPDATE_QTY': {
+      const { id, qty } = action.payload;
+      if (qty < 1 || qty > 10) return state;
+      const updated = state.items.map(i =>
+        i.id === id ? { ...i, qty } : i
       );
-      return {
-        ...state,
-        items: newItems,
-        total: calculateTotal(newItems)
-      };
+      return { ...state, items: updated };
     }
-
+    case 'REMOVE_ITEM': {
+      return { ...state, items: state.items.filter(i => i.id !== action.payload) };
+    }
     case 'CLEAR_CART':
-      return {
-        ...state,
-        items: [],
-        total: 0
-      };
-
+      return { ...state, items: [] };
     case 'TOGGLE_CART':
-      return {
-        ...state,
-        isOpen: !state.isOpen
-      };
-
+      return { ...state, isOpen: !state.isOpen };
     case 'OPEN_CART':
-      return {
-        ...state,
-        isOpen: true
-      };
-
+      return { ...state, isOpen: true };
     case 'CLOSE_CART':
-      return {
-        ...state,
-        isOpen: false
-      };
-
+      return { ...state, isOpen: false };
     default:
       return state;
   }
 };
 
-const calculateTotal = (items: CartItem[]): number => {
-  return items.reduce((total, item) => {
-    const price = parseFloat(item.price.replace('$', ''));
-    return total + (price * item.quantity);
-  }, 0);
+
+export const calculateSubtotal = (items: CartItem[]): number => {
+  return items.reduce((total, item) => total + item.price * item.qty, 0);
 };
+
 
 interface CartContextType {
   state: CartState;
   addItem: (item: CartItem) => void;
+  updateQty: (id: string, qty: number) => void;
   removeItem: (id: string) => void;
-  updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
   toggleCart: () => void;
   openCart: () => void;
   closeCart: () => void;
   itemCount: number;
+  subtotal: number;
 }
 
+
 const CartContext = createContext<CartContextType | undefined>(undefined);
+
 
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, {
     items: [],
     isOpen: false,
-    total: 0
   });
 
-  // Load cart from localStorage on mount
+  // Hydrate from localStorage
   useEffect(() => {
-    const savedCart = localStorage.getItem('truthmatters-cart');
-    if (savedCart) {
+    const saved = localStorage.getItem('truthmatters-cart');
+    if (saved) {
       try {
-        const cartData = JSON.parse(savedCart);
-        cartData.items.forEach((item: CartItem) => {
-          dispatch({ type: 'ADD_ITEM', payload: item });
-        });
-      } catch (error) {
-        console.error('Error loading cart from localStorage:', error);
-      }
+        const { items } = JSON.parse(saved);
+        if (Array.isArray(items)) {
+          items.forEach((item: CartItem) => {
+            dispatch({ type: 'ADD_ITEM', payload: item });
+          });
+        }
+      } catch {}
     }
   }, []);
 
-  // Save cart to localStorage whenever it changes
+  // Persist to localStorage
   useEffect(() => {
-    localStorage.setItem('truthmatters-cart', JSON.stringify(state));
-  }, [state]);
+    localStorage.setItem('truthmatters-cart', JSON.stringify({ items: state.items }));
+  }, [state.items]);
 
-  const addItem = (item: CartItem) => {
-    dispatch({ type: 'ADD_ITEM', payload: item });
-  };
-
-  const removeItem = (id: string) => {
-    dispatch({ type: 'REMOVE_ITEM', payload: id });
-  };
-
-  const updateQuantity = (id: string, quantity: number) => {
-    if (quantity <= 0) {
-      removeItem(id);
-    } else {
-      dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });
-    }
-  };
-
-  const clearCart = () => {
-    dispatch({ type: 'CLEAR_CART' });
-  };
-
-  const toggleCart = () => {
-    dispatch({ type: 'TOGGLE_CART' });
-  };
-
-  const openCart = () => {
-    dispatch({ type: 'OPEN_CART' });
-  };
-
-  const closeCart = () => {
-    dispatch({ type: 'CLOSE_CART' });
-  };
-
-  const itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
+  const addItem = (item: CartItem) => dispatch({ type: 'ADD_ITEM', payload: item });
+  const updateQty = (id: string, qty: number) => dispatch({ type: 'UPDATE_QTY', payload: { id, qty } });
+  const removeItem = (id: string) => dispatch({ type: 'REMOVE_ITEM', payload: id });
+  const clearCart = () => dispatch({ type: 'CLEAR_CART' });
+  const toggleCart = () => dispatch({ type: 'TOGGLE_CART' });
+  const openCart = () => dispatch({ type: 'OPEN_CART' });
+  const closeCart = () => dispatch({ type: 'CLOSE_CART' });
+  const itemCount = state.items.reduce((total, item) => total + item.qty, 0);
+  const subtotal = calculateSubtotal(state.items);
 
   return (
     <CartContext.Provider value={{
       state,
       addItem,
+      updateQty,
       removeItem,
-      updateQuantity,
       clearCart,
       toggleCart,
       openCart,
       closeCart,
-      itemCount
+      itemCount,
+      subtotal
     }}>
       {children}
     </CartContext.Provider>
   );
 };
 
+
 export const useCart = () => {
   const context = useContext(CartContext);
-  if (context === undefined) {
-    throw new Error('useCart must be used within a CartProvider');
-  }
+  if (!context) throw new Error('useCart must be used within a CartProvider');
   return context;
 };

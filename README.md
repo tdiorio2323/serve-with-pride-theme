@@ -1,3 +1,11 @@
+# Mock Checkout Flow
+- Cart → Checkout → Order Success are front-end only.
+- No Stripe or API calls. Uses `checkoutMock.ts`.
+- Pages are lazy-loaded via `React.lazy` + `Suspense`.
+
+# Front-end Structure
+- Components: ProductCard, ProductGrid, Skeletons.
+- Performance: lazy images (`loading="lazy"`, `decoding="async"`, `fetchPriority="low"`), route splitting.
 # Welcome to your Lovable project
 
 ## Project info
