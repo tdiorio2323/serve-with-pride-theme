@@ -11,9 +11,12 @@ import { Product } from "@/data/products";
 import { ShoppingCart, Eye, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
 
+interface ProductCardProps {
   product: Product;
   isLoading?: boolean;
+}
 
+const ProductCard: React.FC<ProductCardProps> = ({ product, isLoading }) => {
   const { addItem, openCart } = useCart();
   const [selectedSize, setSelectedSize] = useState<string>(product.sizes[0] || 'M');
   const [selectedColor, setSelectedColor] = useState<string>(product.colors[0] || 'Black');

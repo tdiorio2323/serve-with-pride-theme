@@ -7,37 +7,26 @@ const Footer = () => {
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Youtube, href: "#", label: "YouTube" }
+    { icon: Twitter, href: "#", label: "Twitter" }
   ];
 
   const footerLinks = {
     "SHOP": [
       { name: "All Products", path: "/all-products" },
-      { name: "T-Shirts", path: "/t-shirts" },
-      { name: "Hoodies", path: "/hoodies" },
-      { name: "Hats", path: "/hats" },
-      { name: "Patches", path: "/patches" },
-      { name: "Accessories", path: "/accessories" }
-    ],
-    "SUPPORT": [
-      { name: "Contact Us", path: "/contact" },
-      { name: "Size Guide", path: "/size-guide" },
+      { name: "Our Story", path: "/our-mission" },
       { name: "Shipping Info", path: "/shipping-info" },
-      { name: "Returns", path: "/returns" },
-      { name: "FAQ", path: "/faq" }
+      { name: "Returns", path: "/returns" }
     ],
     "COMPANY": [
-      { name: "About Us", path: "/about" },
-      { name: "Our Mission", path: "/our-mission" },
-      { name: "Careers", path: "/careers" },
-      { name: "Press", path: "/press" },
-      { name: "Blog", path: "/blog" }
+      { name: "Our Story", path: "/our-mission" },
+      { name: "Shipping Info", path: "/shipping-info" },
+      { name: "Terms of Service", path: "/terms-of-service" },
+      { name: "Privacy Policy", path: "/privacy-policy" }
     ]
   };
 
   return (
-    <footer className="bg-brand-navy text-white">
+    <footer className="bg-gray-950 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand Section */}
@@ -53,23 +42,13 @@ const Footer = () => {
                 height={48}
                 className="h-12 w-12 object-contain"
               />
-              <div className="font-display text-2xl font-bold tracking-wide">
+              <div className="font-display text-3xl font-bold tracking-wide text-white">
                 TRUTH MATTERS
               </div>
             </div>
             
-            <div className="mb-6">
-              <div className="font-display text-lg font-bold mb-2 tracking-wide text-primary">
-                VETERAN & FIRST RESPONDER OWNED
-              </div>
-              <div className="font-display text-lg font-bold tracking-wide text-primary">
-                BUILT IN THE USA
-              </div>
-            </div>
-            
             <p className="font-body text-white/80 leading-relaxed mb-6">
-              Proudly serving those who serve. Every purchase supports our mission 
-              to give back to the veteran and first responder communities.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
 
             <div className="flex space-x-4">
@@ -77,7 +56,7 @@ const Footer = () => {
                 <a 
                   key={index}
                   href={social.href}
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-200"
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors duration-200"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5" />
@@ -111,7 +90,7 @@ const Footer = () => {
         {/* Newsletter Section */}
         <div className="border-t border-white/20 pt-8 mt-12">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="font-display text-2xl font-bold mb-4 tracking-wide">
+            <h3 className="font-display text-2xl font-bold mb-4 tracking-wide uppercase">
               STAY CONNECTED
             </h3>
             <p className="font-body text-white/80 mb-6">
@@ -120,12 +99,11 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input 
                 type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary"
+                placeholder="Email"
+                className="flex-1 px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-red-700"
               />
               <Button 
-                variant="hero"
-                className="font-display font-bold tracking-wide"
+                className="font-display font-bold tracking-wide bg-red-700 hover:bg-red-800 text-white"
               >
                 SUBSCRIBE
               </Button>
@@ -137,12 +115,12 @@ const Footer = () => {
         <div className="border-t border-white/20 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/60">
             <div className="font-body mb-4 md:mb-0">
-              © 2024 Truth Matters. All rights reserved.
+              © 2025 Truth Matters. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-              <Link to="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
-              <Link to="/accessibility" className="hover:text-primary transition-colors">Accessibility</Link>
+              <Link to="/privacy-policy" className="hover:text-red-500 transition-colors">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="hover:text-red-500 transition-colors">Terms of Service</Link>
+              <Link to="/accessibility" className="hover:text-red-500 transition-colors">Accessibility</Link>
             </div>
           </div>
         </div>
