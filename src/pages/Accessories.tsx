@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Filter, Grid, List, SortAsc } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ProductCard } from "@/components/ProductCard";
+import ProductCard from "@/components/ProductCard";
 import { getProductsByCategory } from "@/data/products";
 
 const Accessories: FC = () => {
