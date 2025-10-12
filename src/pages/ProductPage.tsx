@@ -66,13 +66,14 @@ const ProductPage = () => {
     const cartItem = {
       id: product.id,
       name: product.name,
-      price: `$${product.price.toFixed(2)}`,
+      price: product.price,
       image: product.images[selectedImageIndex] || product.images[0],
-      description: product.description,
-      category: product.category,
-      quantity: quantity,
-      size: selectedSize,
-      color: selectedColor,
+      variant: {
+        size: selectedSize,
+        color: selectedColor,
+      },
+      qty: quantity,
+      inStock: product.inStock,
     };
 
     addItem(cartItem);

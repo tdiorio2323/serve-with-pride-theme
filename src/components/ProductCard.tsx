@@ -1,9 +1,14 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ProductCardSkeleton } from "./ProductCardSkeleton";
+import { Product } from "@/data/products";
 
-/** @param {{ product?: any, isLoading?: boolean }} props */
-export default function ProductCard({ product, isLoading = false }) {
+interface ProductCardProps {
+  product?: Product;
+  isLoading?: boolean;
+}
+
+export default function ProductCard({ product, isLoading = false }: ProductCardProps) {
   if (isLoading || !product) return <ProductCardSkeleton />;
 
   const price = useMemo(() => {

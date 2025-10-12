@@ -26,8 +26,20 @@ npm run build:dev
 # Lint the codebase
 npm run lint
 
+# Strict linting (no warnings)
+npm run lint:strict
+
+# Type check without emitting files
+npm run typecheck
+
 # Preview production build
 npm run preview
+
+# Analyze bundle size
+npm run analyze:bundle
+
+# Audit routes
+npm run analyze:routes
 ```
 
 ## Tech Stack
@@ -54,6 +66,11 @@ Routes are defined in `src/App.tsx` using React Router v6 with v7 future flags e
 - Dynamic product route: `/product/:id` handled by `ProductPage.tsx`
 - Catch-all `*` route for 404 - **IMPORTANT**: Add all custom routes ABOVE the catch-all route
 
+**Route Loading Strategy**:
+- Index and NotFound pages are eagerly loaded for immediate availability
+- All other pages use `React.lazy()` for code splitting and performance
+- Suspense boundary shows loading state during lazy load transitions
+
 Provider hierarchy (from outer to inner):
 1. QueryClientProvider (TanStack Query)
 2. TooltipProvider (Radix UI)
@@ -79,11 +96,11 @@ Shopping cart managed via `src/contexts/CartContext.tsx`:
 - Cart items track: product details, quantity, size, color
 - Hook: `useCart()` provides access to cart state and methods
 
-**CRITICAL TYPE MISMATCH**: There are two Product interfaces with incompatible ID types:
-- `src/data/products.ts`: Product.id is `string` (e.g., 'tshirt-truth-matters-1')
-- `src/contexts/CartContext.tsx`: Product.id is `number`
-
-When working with cart functionality, you'll need to bridge these types. The CartItem interface extends the CartContext Product (with numeric ID). When adding products to cart, ensure proper type handling or consider unifying the Product interface definitions.
+**CartItem Interface**: CartItem in `src/contexts/CartContext.tsx` has a simplified structure compared to the full Product interface:
+- id: string (matches Product.id from products.ts)
+- name, price, image, qty: basic product info
+- variant: optional size and color selection
+- Note: CartItem is specifically designed for cart state, not a duplicate Product definition
 
 ### Path Aliasing
 
@@ -121,6 +138,24 @@ import { products } from "@/data/products"
 **Utilities**:
 - `cn()` from `src/lib/utils.ts` for conditional class merging
 - Custom `.hero-flag-background` utility class with overlay effect
+
+### Checkout & Payments
+
+**Mock Checkout Flow**: The checkout process is currently front-end only with no real payment integration:
+- Mock implementation in `src/lib/checkoutMock.ts`
+- Flow: Cart → Checkout → Order Success
+- No Stripe API calls or backend processing
+- `createCheckoutSessionMock()` returns a mock success URL
+
+### Performance Optimizations
+
+- **Route-level code splitting**: All non-critical pages lazy loaded with React.lazy()
+- **Image optimization**: ProductCard and ProductGrid components use:
+  - `loading="lazy"` for deferred loading
+  - `decoding="async"` for non-blocking decode
+  - `fetchPriority="low"` for below-fold images
+- **Suspense boundaries**: Graceful loading states during route transitions
+- **Component skeletons**: Loading states for improved perceived performance
 
 ## Development Notes
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Sheet,
   SheetContent,
@@ -39,8 +40,13 @@ export const ShoppingCartTrigger = () => {
 };
 
 export const ShoppingCart = () => {
+  const navigate = useNavigate();
+  const { state, removeItem, updateQty, clearCart, closeCart, subtotal, donationAmount } = useCart();
 
-  const { state, removeItem, updateQuantity, clearCart, closeCart, donationAmount } = useCart();
+  const handleCheckout = () => {
+    closeCart();
+    navigate('/checkout');
+  };
 
   return (
     <Sheet open={state.isOpen} onOpenChange={closeCart}>
@@ -66,10 +72,10 @@ export const ShoppingCart = () => {
             <div className="space-y-4">
               {state.items.map((item) => (
                 <CartItem
-                  key={`${item.id}-${item.size}-${item.color}`}
+                  key={`${item.id}-${item.variant?.size}-${item.variant?.color}`}
                   item={item}
                   removeItem={removeItem}
-                  updateQuantity={updateQuantity}
+                  updateQuantity={updateQty}
                 />
               ))}
 
@@ -78,7 +84,7 @@ export const ShoppingCart = () => {
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
                   <span>Subtotal</span>
-                  <span>{formatPrice(state.total)}</span>
+                  <span>{formatPrice(subtotal)}</span>
                 </div>
                 <div className="flex justify-between text-sm text-primary">
                   <span>Donation (${donationAmount} to veterans)</span>
@@ -91,12 +97,12 @@ export const ShoppingCart = () => {
                 <Separator />
                 <div className="flex justify-between font-semibold">
                   <span>Total</span>
-                  <span>{formatPrice(state.total + donationAmount)}</span>
+                  <span>{formatPrice(subtotal + donationAmount)}</span>
                 </div>
               </div>
 
               <div className="space-y-2 pt-4">
-                <Button className="w-full" size="lg">
+                <Button className="w-full" size="lg" onClick={handleCheckout}>
                   Proceed to Checkout
                 </Button>
                 <Button
