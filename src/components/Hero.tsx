@@ -17,9 +17,9 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-        
-        
-        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 tracking-wider drop-shadow-2xl mt-16">
+
+
+        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 tracking-wider drop-shadow-2xl">
           Built on Honor,
           <br />
           Worn with Pride

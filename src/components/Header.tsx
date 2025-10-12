@@ -17,7 +17,7 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="relative flex items-center justify-center h-32">
             <DesktopNav />
-            <Logo className="h-20" />
+            <Logo className="h-10 md:h-20" />
             <MobileNav isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
           </div>
         </div>
