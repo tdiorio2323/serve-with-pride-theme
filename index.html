@@ -5,27 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>TRUTH®</title>
     <meta name="description" content="Veteran & First Responder owned apparel brand. Every purchase supports those who serve. Military, Police, Fire & EMS gear with service-verified discounts.">
+
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+    <!-- Preload LCP hero image -->
+    <link rel="preload" as="image" href="/TRUTH-red-white-blue.jpg" fetchpriority="high" />
 
     <!-- Theme & Branding -->
     <meta name="theme-color" content="#0B0B0C" />
     <meta name="author" content="TRUTH®" />
 
-    <!-- SEO & Social Media -->
-    <meta property="og:title" content="TRUTH®" />
+    <!-- SEO & Social Media (Note: Helmet will override these on route pages) -->
+    <meta property="og:title" content="TRUTH® - Patriotic Apparel for Those Who Serve" />
     <meta property="og:description" content="Veteran & First Responder owned apparel brand. Every purchase supports those who serve. Military, Police, Fire & EMS gear with service-verified discounts." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://truth.tdstudiosny.com/" />
-    <meta property="og:image" content="/TRUTH-red-white-blue.jpg">
+    <meta property="og:url" content="https://truthmatters.com/" />
+    <meta property="og:image" content="https://truthmatters.com/og-image.jpg">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="TRUTH®" />
+    <meta name="twitter:title" content="TRUTH® - Patriotic Apparel for Those Who Serve" />
     <meta name="twitter:description" content="Veteran & First Responder owned apparel brand supporting those who serve." />
-    <meta name="twitter:image" content="/TRUTH-red-white-blue.jpg">
+    <meta name="twitter:image" content="https://truthmatters.com/og-image.jpg">
 
-    <link rel="canonical" href="https://truthmatters.com/" />
+    <!-- Canonical will be set dynamically by react-helmet-async -->
   </head>
 
   <body>

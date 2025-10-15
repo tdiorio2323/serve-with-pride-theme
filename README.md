@@ -3,6 +3,10 @@
 - No Stripe or API calls. Uses `checkoutMock.ts`.
 - Pages are lazy-loaded via `React.lazy` + `Suspense`.
 
+## Contributor Guide
+
+For repository structure, coding conventions, and workflow expectations, see [Repository Guidelines](AGENTS.md).
+
 # Front-end Structure
 - Components: ProductCard, ProductGrid, Skeletons.
 - Performance: lazy images (`loading="lazy"`, `decoding="async"`, `fetchPriority="low"`), route splitting.

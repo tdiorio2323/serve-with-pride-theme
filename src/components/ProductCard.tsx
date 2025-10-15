@@ -9,8 +9,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, isLoading = false }: ProductCardProps) {
-  if (isLoading || !product) return <ProductCardSkeleton />;
-
+  // Calculate price before early return to satisfy React Hooks rules
   const price = useMemo(() => {
     const amt = Number(product?.price ?? 0);
     const cur = "USD"; // Assuming USD as default currency
@@ -22,6 +21,8 @@ export default function ProductCard({ product, isLoading = false }: ProductCardP
   }, [product?.price]);
 
   const href = product?.id ? `/product/${product.id}` : "#";
+
+  if (isLoading || !product) return <ProductCardSkeleton />;
 
   return (
     <Link className="block group" to={href}>

@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import heroBg from "@/assets/hero-bg.jpg";
 import serviceBg from "@/assets/service-bg.jpg";
@@ -7,6 +8,13 @@ import Footer from "@/components/Footer";
 const About: FC = () => {
   return (
     <div className="min-h-screen relative">
+      <Helmet>
+        <title>About Us - Truth Matters</title>
+        <meta name="description" content="Founded by veterans and first responders, Truth Matters supports those who serve. Learn about our mission to give back to veteran causes." />
+        <meta property="og:title" content="About Us - Truth Matters" />
+        <meta property="og:description" content="Founded by veterans and first responders, Truth Matters supports those who serve." />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: `url(${serviceBg})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.4, zIndex: -10 }}></div>
       <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: `url(/about-bg.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.5, zIndex: -10 }}></div>
       <Header />

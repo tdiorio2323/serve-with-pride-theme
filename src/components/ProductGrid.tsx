@@ -1,7 +1,8 @@
 import ProductCard from "./ProductCard";
 import { ProductCardSkeleton } from "./ProductCard.Skeleton";
+import { Product } from "@/data/products";
 
-type Props = { products?: Array<any>; isLoading?: boolean };
+type Props = { products?: Product[]; isLoading?: boolean };
 export default function ProductGrid({ products, isLoading }: Props) {
   const loading = isLoading || !products;
   if (loading) {

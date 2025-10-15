@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
 import Skeleton from "@/components/ui/Skeleton";
 
+interface ProductData {
+  title: string;
+  image: string;
+}
+
 export default function ProductPage() {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<ProductData | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

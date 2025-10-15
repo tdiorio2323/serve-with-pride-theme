@@ -1,3 +1,16 @@
+# Truth Matters - Robots.txt
+User-agent: *
+Allow: /
+
+# Disallow checkout/cart URLs from indexing
+Disallow: /cart
+Disallow: /checkout
+Disallow: /order/
+
+# Sitemap
+Sitemap: https://truthmatters.com/sitemap.xml
+
+# Crawl-delay for polite crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -8,7 +21,4 @@ User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
-Allow: /
-
-User-agent: *
 Allow: /

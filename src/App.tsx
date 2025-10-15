@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "@/contexts/CartContext";
+import { HelmetProvider } from "react-helmet-async";
 
 // Eager load: critical pages (Index, NotFound)
 import Index from "./pages/Index";
@@ -46,11 +47,12 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <CartProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+    <HelmetProvider>
+      <TooltipProvider>
+        <CartProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
         <Suspense fallback={<div className="flex items-center justify-center min-h-screen">
           <div className="animate-pulse text-brand-red">Loading...</div>
         </div>}>
@@ -90,8 +92,9 @@ const App = () => (
           </Routes>
         </Suspense>
         </BrowserRouter>
-      </CartProvider>
-    </TooltipProvider>
+        </CartProvider>
+      </TooltipProvider>
+    </HelmetProvider>
   </QueryClientProvider>
 );
 

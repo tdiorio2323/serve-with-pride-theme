@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -39,6 +40,13 @@ const AllProducts: FC = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Shop All Products - Truth Matters</title>
+        <meta name="description" content="Browse our complete collection of patriotic apparel and gear. T-shirts, hoodies, hats, patches, and accessories for veterans, first responders, and patriots." />
+        <meta property="og:title" content="Shop All Products - Truth Matters" />
+        <meta property="og:description" content="Complete collection of patriotic apparel and gear for those who serve." />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Header />
 
       {/* Hero Section */}

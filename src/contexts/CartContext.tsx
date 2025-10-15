@@ -120,7 +120,9 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
             dispatch({ type: 'ADD_ITEM', payload: item });
           });
         }
-      } catch {}
+      } catch {
+        // Ignore invalid localStorage data
+      }
     }
   }, []);
 

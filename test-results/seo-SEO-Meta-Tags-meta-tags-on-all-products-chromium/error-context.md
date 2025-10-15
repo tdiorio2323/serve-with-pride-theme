@@ -1,0 +1,254 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - navigation [ref=e7]:
+          - button "SHOP" [ref=e8] [cursor=pointer]:
+            - text: SHOP
+            - img [ref=e9]
+          - link "MENS" [ref=e11] [cursor=pointer]:
+            - /url: /mens
+          - link "WOMENS" [ref=e12] [cursor=pointer]:
+            - /url: /womens
+          - link "ACCESSORIES" [ref=e13] [cursor=pointer]:
+            - /url: /accessories
+        - navigation [ref=e14]:
+          - link "ABOUT" [ref=e15] [cursor=pointer]:
+            - /url: /about
+          - link "CAUSES" [ref=e16] [cursor=pointer]:
+            - /url: /causes
+          - link "CONTACT" [ref=e17] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e18]:
+          - button "Search" [ref=e19] [cursor=pointer]:
+            - img [ref=e20]
+          - button [ref=e24] [cursor=pointer]:
+            - img
+        - link "Truth Matters Logo" [ref=e25] [cursor=pointer]:
+          - /url: /
+          - img "Truth Matters Logo" [ref=e26]
+    - generic [ref=e27]: 🇺🇸 FREE SHIPPING ON ORDERS $75+ | VETERAN & FIRST RESPONDER DISCOUNTS AVAILABLE
+    - generic [ref=e30]:
+      - generic [ref=e32]:
+        - img [ref=e33]
+        - text: Complete Collection
+      - heading "All Truth Matters Products" [level=1] [ref=e36]
+      - paragraph [ref=e37]: Browse our complete collection of patriotic apparel and accessories. Every purchase supports conservative values and veteran causes.
+    - generic [ref=e40]:
+      - generic [ref=e42]:
+        - img [ref=e43]
+        - textbox "Search products..." [ref=e46]
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: "Category:"
+            - combobox [ref=e51] [cursor=pointer]:
+              - generic: All
+              - img [ref=e52]
+          - generic [ref=e54]:
+            - generic [ref=e55]: "Gender:"
+            - combobox [ref=e56] [cursor=pointer]:
+              - generic: All
+              - img [ref=e57]
+          - generic [ref=e59]:
+            - generic [ref=e60]: "Sort:"
+            - combobox [ref=e61] [cursor=pointer]:
+              - generic: Name A-Z
+              - img [ref=e62]
+        - generic [ref=e64]:
+          - generic [ref=e65]: 17 Products
+          - generic [ref=e66]:
+            - button [ref=e67] [cursor=pointer]:
+              - img
+            - button [ref=e68] [cursor=pointer]:
+              - img
+    - generic [ref=e71]:
+      - link "American Spirit Hoodie American Spirit Hoodie $54.99" [ref=e72] [cursor=pointer]:
+        - /url: /product/hoodie-american-spirit
+        - img "American Spirit Hoodie" [ref=e74]
+        - generic [ref=e75]:
+          - heading "American Spirit Hoodie" [level=3] [ref=e76]
+          - paragraph [ref=e77]: $54.99
+      - link "Defender Mark Cap Defender Mark Cap $24.99" [ref=e78] [cursor=pointer]:
+        - /url: /product/hat-defender-mark-unisex
+        - img "Defender Mark Cap" [ref=e80]
+        - generic [ref=e81]:
+          - heading "Defender Mark Cap" [level=3] [ref=e82]
+          - paragraph [ref=e83]: $24.99
+      - link "Freedom Eagle Women's Tee Freedom Eagle Women's Tee $32.99" [ref=e84] [cursor=pointer]:
+        - /url: /product/tshirt-women-freedom-eagle-womens
+        - img "Freedom Eagle Women's Tee" [ref=e86]
+        - generic [ref=e87]:
+          - heading "Freedom Eagle Women's Tee" [level=3] [ref=e88]
+          - paragraph [ref=e89]: $32.99
+      - link "Freedom Stripes Hoodie Freedom Stripes Hoodie $54.99" [ref=e90] [cursor=pointer]:
+        - /url: /product/hoodie-freedom-stripes
+        - img "Freedom Stripes Hoodie" [ref=e92]
+        - generic [ref=e93]:
+          - heading "Freedom Stripes Hoodie" [level=3] [ref=e94]
+          - paragraph [ref=e95]: $54.99
+      - link "Heritage Cross Patch Heritage Cross Patch $12.99" [ref=e96] [cursor=pointer]:
+        - /url: /product/patch-heritage-cross
+        - img "Heritage Cross Patch" [ref=e98]
+        - generic [ref=e99]:
+          - heading "Heritage Cross Patch" [level=3] [ref=e100]
+          - paragraph [ref=e101]: $12.99
+      - link "Honor Badge Tee Honor Badge Tee $29.99" [ref=e102] [cursor=pointer]:
+        - /url: /product/tshirt-honor-badge
+        - img "Honor Badge Tee" [ref=e104]
+        - generic [ref=e105]:
+          - heading "Honor Badge Tee" [level=3] [ref=e106]
+          - paragraph [ref=e107]: $29.99
+      - link "Justice Seal Women's Fitted Tee Justice Seal Women's Fitted Tee $32.99" [ref=e108] [cursor=pointer]:
+        - /url: /product/tshirt-women-justice-seal
+        - img "Justice Seal Women's Fitted Tee" [ref=e110]
+        - generic [ref=e111]:
+          - heading "Justice Seal Women's Fitted Tee" [level=3] [ref=e112]
+          - paragraph [ref=e113]: $32.99
+      - link "Liberty Guard Tee Liberty Guard Tee $29.99" [ref=e114] [cursor=pointer]:
+        - /url: /product/tshirt-liberty-guard
+        - img "Liberty Guard Tee" [ref=e116]
+        - generic [ref=e117]:
+          - heading "Liberty Guard Tee" [level=3] [ref=e118]
+          - paragraph [ref=e119]: $29.99
+      - link "Patriot Coffee Mug Patriot Coffee Mug $18.99" [ref=e120] [cursor=pointer]:
+        - /url: /product/accessory-patriot-mug
+        - img "Patriot Coffee Mug" [ref=e122]
+        - generic [ref=e123]:
+          - heading "Patriot Coffee Mug" [level=3] [ref=e124]
+          - paragraph [ref=e125]: $18.99
+      - link "Patriot Shield Tee Patriot Shield Tee $29.99" [ref=e126] [cursor=pointer]:
+        - /url: /product/tshirt-patriot-shield-unisex
+        - img "Patriot Shield Tee" [ref=e128]
+        - generic [ref=e129]:
+          - heading "Patriot Shield Tee" [level=3] [ref=e130]
+          - paragraph [ref=e131]: $29.99
+      - link "Service Honor Hoodie Service Honor Hoodie $54.99" [ref=e132] [cursor=pointer]:
+        - /url: /product/hoodie-service-honor
+        - img "Service Honor Hoodie" [ref=e134]
+        - generic [ref=e135]:
+          - heading "Service Honor Hoodie" [level=3] [ref=e136]
+          - paragraph [ref=e137]: $54.99
+      - link "Truth Logo Hoodie Truth Logo Hoodie $54.99" [ref=e138] [cursor=pointer]:
+        - /url: /product/hoodie-truth-logo
+        - img "Truth Logo Hoodie" [ref=e140]
+        - generic [ref=e141]:
+          - heading "Truth Logo Hoodie" [level=3] [ref=e142]
+          - paragraph [ref=e143]: $54.99
+      - link "Truth Matters Classic Tee Truth Matters Classic Tee $29.99" [ref=e144] [cursor=pointer]:
+        - /url: /product/tshirt-truth-matters-1-unisex
+        - img "Truth Matters Classic Tee" [ref=e146]
+        - generic [ref=e147]:
+          - heading "Truth Matters Classic Tee" [level=3] [ref=e148]
+          - paragraph [ref=e149]: $29.99
+      - link "Truth Matters Sticker Pack Truth Matters Sticker Pack $9.99" [ref=e150] [cursor=pointer]:
+        - /url: /product/accessory-truth-sticker-pack
+        - img "Truth Matters Sticker Pack" [ref=e152]
+        - generic [ref=e153]:
+          - heading "Truth Matters Sticker Pack" [level=3] [ref=e154]
+          - paragraph [ref=e155]: $9.99
+      - link "Unity Star Trucker Hat Unity Star Trucker Hat $26.99" [ref=e156] [cursor=pointer]:
+        - /url: /product/hat-unity-star
+        - img "Unity Star Trucker Hat" [ref=e158]
+        - generic [ref=e159]:
+          - heading "Unity Star Trucker Hat" [level=3] [ref=e160]
+          - paragraph [ref=e161]: $26.99
+      - link "Victory Banner Hoodie Victory Banner Hoodie $54.99" [ref=e162] [cursor=pointer]:
+        - /url: /product/hoodie-victory-banner
+        - img "Victory Banner Hoodie" [ref=e164]
+        - generic [ref=e165]:
+          - heading "Victory Banner Hoodie" [level=3] [ref=e166]
+          - paragraph [ref=e167]: $54.99
+      - link "Warrior Crest Hoodie Warrior Crest Hoodie $54.99" [ref=e168] [cursor=pointer]:
+        - /url: /product/hoodie-warrior-crest-unisex
+        - img "Warrior Crest Hoodie" [ref=e170]
+        - generic [ref=e171]:
+          - heading "Warrior Crest Hoodie" [level=3] [ref=e172]
+          - paragraph [ref=e173]: $54.99
+    - generic [ref=e175]:
+      - generic [ref=e176]:
+        - heading "Shop by Category" [level=2] [ref=e177]
+        - paragraph [ref=e178]: Find exactly what you're looking for
+      - generic [ref=e179]:
+        - button "👕 T-Shirts" [ref=e180] [cursor=pointer]:
+          - generic [ref=e181]: 👕
+          - generic [ref=e182]: T-Shirts
+        - button "🧥 Hoodies" [ref=e183] [cursor=pointer]:
+          - generic [ref=e184]: 🧥
+          - generic [ref=e185]: Hoodies
+        - button "🧢 Hats" [ref=e186] [cursor=pointer]:
+          - generic [ref=e187]: 🧢
+          - generic [ref=e188]: Hats
+        - button "🎖️ Accessories" [ref=e189] [cursor=pointer]:
+          - generic [ref=e190]: 🎖️
+          - generic [ref=e191]: Accessories
+    - contentinfo [ref=e192]:
+      - generic [ref=e193]:
+        - generic [ref=e194]:
+          - generic [ref=e195]:
+            - link "Truth Matters Logo" [ref=e197] [cursor=pointer]:
+              - /url: /
+              - img "Truth Matters Logo" [ref=e198]
+            - paragraph [ref=e199]: We serve those who serve us. Every purchase supports veterans, law enforcement, firefighters & EMS.
+            - generic [ref=e200]:
+              - link "Facebook" [ref=e201] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e202]
+              - link "Instagram" [ref=e204] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e205]
+              - link "Twitter" [ref=e208] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e209]
+          - generic [ref=e211]:
+            - heading "SHOP" [level=3] [ref=e212]
+            - list [ref=e213]:
+              - listitem [ref=e214]:
+                - link "All Products" [ref=e215] [cursor=pointer]:
+                  - /url: /all-products
+              - listitem [ref=e216]:
+                - link "Our Story" [ref=e217] [cursor=pointer]:
+                  - /url: /our-mission
+              - listitem [ref=e218]:
+                - link "Shipping Info" [ref=e219] [cursor=pointer]:
+                  - /url: /shipping-info
+              - listitem [ref=e220]:
+                - link "Returns" [ref=e221] [cursor=pointer]:
+                  - /url: /returns
+          - generic [ref=e222]:
+            - heading "COMPANY" [level=3] [ref=e223]
+            - list [ref=e224]:
+              - listitem [ref=e225]:
+                - link "Our Story" [ref=e226] [cursor=pointer]:
+                  - /url: /our-mission
+              - listitem [ref=e227]:
+                - link "Shipping Info" [ref=e228] [cursor=pointer]:
+                  - /url: /shipping-info
+              - listitem [ref=e229]:
+                - link "Terms of Service" [ref=e230] [cursor=pointer]:
+                  - /url: /terms-of-service
+              - listitem [ref=e231]:
+                - link "Privacy Policy" [ref=e232] [cursor=pointer]:
+                  - /url: /privacy-policy
+        - generic [ref=e234]:
+          - heading "STAY CONNECTED" [level=3] [ref=e235]
+          - paragraph [ref=e236]: Get updates on new products, exclusive discounts, and community initiatives.
+          - generic [ref=e237]:
+            - textbox "Email" [ref=e238]
+            - button "SUBSCRIBE" [ref=e239] [cursor=pointer]
+        - generic [ref=e241]:
+          - generic [ref=e242]: © 2025 Truth Matters. All rights reserved.
+          - generic [ref=e243]:
+            - link "Privacy Policy" [ref=e244] [cursor=pointer]:
+              - /url: /privacy-policy
+            - link "Terms of Service" [ref=e245] [cursor=pointer]:
+              - /url: /terms-of-service
+            - link "Accessibility" [ref=e246] [cursor=pointer]:
+              - /url: /accessibility
+```

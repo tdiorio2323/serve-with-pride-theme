@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
 
 
-        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 tracking-wider drop-shadow-2xl">
+        <h1 className="font-display text-5xl sm:text-6xl md:text-8xl font-bold text-white mb-6 tracking-wider drop-shadow-2xl">
           Built on Honor,
           <br />
           Worn with Pride

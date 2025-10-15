@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Filter, Grid, List, SortAsc, Shirt } from "lucide-react";
@@ -133,6 +134,13 @@ const Tshirts: FC = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Patriotic T-Shirts - Truth Matters</title>
+        <meta name="description" content="Shop premium patriotic t-shirts for veterans, first responders, and patriots. 100% cotton, made with pride. Every purchase supports veteran causes." />
+        <meta property="og:title" content="Patriotic T-Shirts - Truth Matters" />
+        <meta property="og:description" content="Premium patriotic t-shirts for those who serve and support America." />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Header />
 
       {/* Hero Section */}

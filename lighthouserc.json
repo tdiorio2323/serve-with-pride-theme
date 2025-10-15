@@ -1,0 +1,31 @@
+{
+  "ci": {
+    "collect": {
+      "startServerCommand": "npm run preview",
+      "url": [
+        "http://localhost:4173/",
+        "http://localhost:4173/all-products",
+        "http://localhost:4173/product/tshirt-truth-matters-1-unisex"
+      ],
+      "numberOfRuns": 1
+    },
+    "assert": {
+      "assertions": {
+        "largest-contentful-paint": ["warn", { "maxNumericValue": 3000 }],
+        "total-blocking-time": ["warn", { "maxNumericValue": 300 }],
+        "first-contentful-paint": ["warn", { "maxNumericValue": 2000 }],
+        "cumulative-layout-shift": ["warn", { "maxNumericValue": 0.1 }],
+        "canonical": "error",
+        "is-crawlable": "error",
+        "crawlable-anchors": "warn",
+        "link-text": "warn",
+        "meta-description": "error",
+        "document-title": "error"
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}
+

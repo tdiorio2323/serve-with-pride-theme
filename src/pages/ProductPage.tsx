@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -10,11 +11,15 @@ import { getProductById, Product } from "@/data/products";
 import { ShoppingCart, Heart, Share2, Truck, Shield, RotateCcw, ArrowLeft } from "lucide-react";
 import { toast } from "sonner";
 import { useShare } from "@/hooks/use-share";
+import { useCanonical } from "@/hooks/use-canonical";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const SITE_URL = import.meta.env.VITE_SITE_URL || 'https://truthmatters.com';
+
 const ProductPage = () => {
   const { id } = useParams<{ id: string }>();
+  useCanonical();
   const navigate = useNavigate();
   const { addItem, openCart } = useCart();
   const { shareContent } = useShare();
@@ -114,6 +119,64 @@ const ProductPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{product.name} - Truth Matters</title>
+        <meta name="description" content={product.description} />
+        <meta property="og:title" content={`${product.name} - Truth Matters`} />
+        <meta property="og:description" content={product.description} />
+        <meta property="og:image" content={`${SITE_URL}${product.images[0]}`} />
+        <meta property="og:type" content="product" />
+        <meta property="og:url" content={`${SITE_URL}/product/${product.id}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={`${SITE_URL}${product.images[0]}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": product.name,
+            "image": product.images,
+            "description": product.description,
+            "sku": product.sku,
+            "brand": {
+              "@type": "Brand",
+              "name": "Truth Matters"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": product.salePrice || product.price,
+              "priceCurrency": "USD",
+              "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+              "url": `${SITE_URL}/product/${product.id}`
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": SITE_URL
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": product.category.charAt(0).toUpperCase() + product.category.slice(1) + "s",
+                "item": `${SITE_URL}/${product.category}s`
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": product.name,
+                "item": `${SITE_URL}/product/${product.id}`
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       <Header />
 
       <div className="container mx-auto px-4 py-8">

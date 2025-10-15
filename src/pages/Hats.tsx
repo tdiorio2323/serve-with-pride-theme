@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Filter, Grid, List, SortAsc } from "lucide-react";
@@ -133,6 +134,13 @@ const Hats: FC = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Patriotic Hats & Caps - Truth Matters</title>
+        <meta name="description" content="High-quality patriotic hats and caps for veterans, first responders, and patriots. Adjustable, durable, and made in the USA. Every purchase supports veteran causes." />
+        <meta property="og:title" content="Patriotic Hats & Caps - Truth Matters" />
+        <meta property="og:description" content="Premium hats and caps for those who serve and support America." />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Header />
 
       {/* Hero Section */}

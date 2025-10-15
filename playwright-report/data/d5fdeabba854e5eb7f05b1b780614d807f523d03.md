@@ -1,0 +1,128 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - banner [ref=e6]:
+      - generic [ref=e8]:
+        - navigation [ref=e9]:
+          - button "SHOP" [ref=e10] [cursor=pointer]:
+            - text: SHOP
+            - img [ref=e11]
+          - link "MENS" [ref=e13] [cursor=pointer]:
+            - /url: /mens
+          - link "WOMENS" [ref=e14] [cursor=pointer]:
+            - /url: /womens
+          - link "ACCESSORIES" [ref=e15] [cursor=pointer]:
+            - /url: /accessories
+        - navigation [ref=e16]:
+          - link "ABOUT" [ref=e17] [cursor=pointer]:
+            - /url: /about
+          - link "CAUSES" [ref=e18] [cursor=pointer]:
+            - /url: /causes
+          - link "CONTACT" [ref=e19] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e20]:
+          - button "Search" [ref=e21] [cursor=pointer]:
+            - img [ref=e22]
+          - button [ref=e26] [cursor=pointer]:
+            - img
+        - link "Truth Matters Logo" [ref=e27] [cursor=pointer]:
+          - /url: /
+          - img "Truth Matters Logo" [ref=e28]
+    - generic [ref=e29]: 🇺🇸 FREE SHIPPING ON ORDERS $75+ | VETERAN & FIRST RESPONDER DISCOUNTS AVAILABLE
+    - generic [ref=e32]:
+      - heading "About Us" [level=1] [ref=e33]
+      - paragraph [ref=e34]: Founded by veterans and first responders, for veterans and first responders.
+    - main [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - heading "Our Story" [level=2] [ref=e38]
+          - paragraph [ref=e39]: "Truth Matters started as a small project in a garage, born from a shared desire to create something meaningful for the communities we came from. As veterans and first responders, we wanted to build a brand that not only provided quality products but also served as a symbol of the values we hold dear: honor, integrity, and unwavering commitment. We've grown since those early days, but our core mission remains the same."
+        - generic [ref=e40]:
+          - heading "Our Mission" [level=2] [ref=e41]
+          - paragraph [ref=e42]: We are a company built on a foundation of service. Our mission is to provide high-quality apparel and gear that reflects the values of honor, courage, and commitment that define our nation's heroes.
+          - paragraph [ref=e43]: Every item we sell is designed with a deep respect for the men and women who have served and continue to serve in our armed forces and emergency services. We are committed to giving back to these communities, and a portion of every sale goes to support veteran and first responder charities.
+        - generic [ref=e44]:
+          - heading "Our Values" [level=2] [ref=e45]
+          - generic [ref=e46]:
+            - generic [ref=e47]:
+              - heading "Honor" [level=3] [ref=e48]
+              - paragraph [ref=e49]: We operate with integrity and a strong moral compass.
+            - generic [ref=e50]:
+              - heading "Courage" [level=3] [ref=e51]
+              - paragraph [ref=e52]: We stand up for what we believe in and support those who do the same.
+            - generic [ref=e53]:
+              - heading "Commitment" [level=3] [ref=e54]
+              - paragraph [ref=e55]: We are dedicated to our customers, our communities, and our cause.
+            - generic [ref=e56]:
+              - heading "Quality" [level=3] [ref=e57]
+              - paragraph [ref=e58]: We take pride in creating products that are built to last.
+        - paragraph [ref=e60]: We believe that what you wear is more than just a piece of clothing; it's a statement of who you are and what you stand for. When you wear our gear, you are not only showing your support for our nation's heroes, but you are also joining a community of like-minded individuals who share a passion for service and a commitment to making a difference.
+    - contentinfo [ref=e61]:
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - generic [ref=e64]:
+            - link "Truth Matters Logo" [ref=e66] [cursor=pointer]:
+              - /url: /
+              - img "Truth Matters Logo" [ref=e67]
+            - paragraph [ref=e68]: We serve those who serve us. Every purchase supports veterans, law enforcement, firefighters & EMS.
+            - generic [ref=e69]:
+              - link "Facebook" [ref=e70] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e71]
+              - link "Instagram" [ref=e73] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e74]
+              - link "Twitter" [ref=e77] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e78]
+          - generic [ref=e80]:
+            - heading "SHOP" [level=3] [ref=e81]
+            - list [ref=e82]:
+              - listitem [ref=e83]:
+                - link "All Products" [ref=e84] [cursor=pointer]:
+                  - /url: /all-products
+              - listitem [ref=e85]:
+                - link "Our Story" [ref=e86] [cursor=pointer]:
+                  - /url: /our-mission
+              - listitem [ref=e87]:
+                - link "Shipping Info" [ref=e88] [cursor=pointer]:
+                  - /url: /shipping-info
+              - listitem [ref=e89]:
+                - link "Returns" [ref=e90] [cursor=pointer]:
+                  - /url: /returns
+          - generic [ref=e91]:
+            - heading "COMPANY" [level=3] [ref=e92]
+            - list [ref=e93]:
+              - listitem [ref=e94]:
+                - link "Our Story" [ref=e95] [cursor=pointer]:
+                  - /url: /our-mission
+              - listitem [ref=e96]:
+                - link "Shipping Info" [ref=e97] [cursor=pointer]:
+                  - /url: /shipping-info
+              - listitem [ref=e98]:
+                - link "Terms of Service" [ref=e99] [cursor=pointer]:
+                  - /url: /terms-of-service
+              - listitem [ref=e100]:
+                - link "Privacy Policy" [ref=e101] [cursor=pointer]:
+                  - /url: /privacy-policy
+        - generic [ref=e103]:
+          - heading "STAY CONNECTED" [level=3] [ref=e104]
+          - paragraph [ref=e105]: Get updates on new products, exclusive discounts, and community initiatives.
+          - generic [ref=e106]:
+            - textbox "Email" [ref=e107]
+            - button "SUBSCRIBE" [ref=e108] [cursor=pointer]
+        - generic [ref=e110]:
+          - generic [ref=e111]: © 2025 Truth Matters. All rights reserved.
+          - generic [ref=e112]:
+            - link "Privacy Policy" [ref=e113] [cursor=pointer]:
+              - /url: /privacy-policy
+            - link "Terms of Service" [ref=e114] [cursor=pointer]:
+              - /url: /terms-of-service
+            - link "Accessibility" [ref=e115] [cursor=pointer]:
+              - /url: /accessibility
+```
