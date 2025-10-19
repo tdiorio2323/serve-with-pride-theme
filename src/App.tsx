@@ -34,9 +34,6 @@ const Patches = lazy(() => import("./pages/Patches"));
 const Accessories = lazy(() => import("./pages/Accessories"));
 const Mens = lazy(() => import("./pages/Mens"));
 const Womens = lazy(() => import("./pages/Womens"));
-const NewPage = lazy(() => import("./pages/NewPage"));
-const TestPage = lazy(() => import("./pages/TestPage"));
-const Mockups = lazy(() => import("./pages/Mockups"));
 
 const Cart = lazy(() => import("./pages/Cart"));
 const Checkout = lazy(() => import("./pages/Checkout"));
@@ -80,9 +77,6 @@ const App = () => (
             <Route path="/accessories" element={<Accessories />} />
             <Route path="/mens" element={<Mens />} />
             <Route path="/womens" element={<Womens />} />
-            <Route path="/new-page" element={<NewPage />} />
-            <Route path="/test-page" element={<TestPage />} />
-            <Route path="/mockups" element={<Mockups />} />
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />

@@ -51,8 +51,8 @@ test.describe("Product Page SEO", () => {
       }).filter(Boolean);
     });
 
-    const hasProduct = productSchema.some((s: any) => s['@type'] === 'Product');
-    const hasBreadcrumb = productSchema.some((s: any) => s['@type'] === 'BreadcrumbList');
+    const hasProduct = productSchema.some((s: Record<string, unknown>) => s['@type'] === 'Product');
+    const hasBreadcrumb = productSchema.some((s: Record<string, unknown>) => s['@type'] === 'BreadcrumbList');
 
     expect(hasProduct).toBeTruthy();
     expect(hasBreadcrumb).toBeTruthy();

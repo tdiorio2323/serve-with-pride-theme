@@ -17,7 +17,7 @@ npm install
 # Start development server (runs on port 8080)
 npm run dev
 
-# Build for production
+# Build for production (includes sitemap generation)
 npm run build
 
 # Build for development mode
@@ -32,14 +32,29 @@ npm run lint:strict
 # Type check without emitting files
 npm run typecheck
 
-# Preview production build
+# Preview production build (runs on port 4173)
 npm run preview
+
+# Run Playwright E2E tests
+npm run test
+
+# Run tests with UI mode
+npm run test:ui
+
+# Run E2E tests (alias for npm run test)
+npm run test:e2e
+
+# Run Lighthouse CI performance tests
+npm run lhci
 
 # Analyze bundle size
 npm run analyze:bundle
 
 # Audit routes
 npm run analyze:routes
+
+# Generate sitemap (runs automatically during build)
+npm run generate:sitemap
 ```
 
 ## Tech Stack
@@ -54,6 +69,8 @@ npm run analyze:routes
 - **Form Handling**: React Hook Form with Zod validation
 - **Icons**: Lucide React
 - **Toasts**: Sonner
+- **Testing**: Playwright for E2E tests, Lighthouse CI for performance
+- **SEO**: react-helmet-async for meta tags, automated sitemap generation
 
 ## Architecture
 
@@ -157,9 +174,47 @@ import { products } from "@/data/products"
 - **Suspense boundaries**: Graceful loading states during route transitions
 - **Component skeletons**: Loading states for improved perceived performance
 
+## Testing
+
+**E2E Testing with Playwright**:
+- Test files located in `./tests` directory
+- Base URL: `http://localhost:4173` (or `PREVIEW_BASE` env var)
+- Runs against production preview build (automatically started via `webServer` config)
+- CI configuration: retries 2x, single worker
+- Test reports: HTML format
+
+**Performance Testing**:
+- Lighthouse CI via `npm run lhci`
+- Use for performance regression testing before deployment
+
+**Pre-PR Checklist**:
+```bash
+npm run lint:strict  # Must pass with zero warnings
+npm run typecheck    # Must pass with no type errors
+npm run preview      # Smoke test the production build
+npm run test         # Run E2E tests
+```
+
+## Coding Conventions
+
+**Naming & Style** (from AGENTS.md):
+- React components: PascalCase (e.g., `ProductCard.tsx`)
+- Hooks: camelCase with `use` prefix (e.g., `useCart`)
+- Use `@/` path alias instead of relative imports
+- 2-space indentation, single quotes in JSX attributes when needed
+- Keep UI state colocated with components
+- Move sharable utilities to `lib/utils/`
+
+**Commit Style**:
+- Follow Conventional Commits: `feat:`, `fix(ui):`, `chore:`
+- Use imperative mood for commit messages
+- Include high-level intent and implementation notes in PR descriptions
+- Add screenshots/recordings for visual changes
+
 ## Development Notes
 
 - Development server runs on `http://[::]:8080` (IPv6 localhost, port 8080)
+- Preview server runs on port 4173
 - Component tagging is enabled in development mode via lovable-tagger
 - **TypeScript Configuration**: Strict mode partially disabled with:
   - `noImplicitAny: false`
@@ -174,3 +229,7 @@ import { products } from "@/data/products"
 ## Project Origin
 
 This project was initially created with Lovable (lovable.dev) and is now managed locally. The README.md contains Lovable-specific instructions that may not be fully relevant for local development.
+
+## Additional Resources
+
+- See [AGENTS.md](AGENTS.md) for detailed repository guidelines, module organization, and workflow expectations
